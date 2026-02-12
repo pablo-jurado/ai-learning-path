@@ -110,9 +110,9 @@ const contentData = {
                 duration: '3 hours'
             },
             {
-                name: 'Course: Agentic AI Foundations',
-                url: 'https://skillbuilder.aws/learning-plan/HDZPWG63J3/agentic-ai-foundations/R4E9CC77T7',
-                duration: '6 hours'
+                name: 'AWS AI Practitioner Learning Plan',
+                url: 'https://skillbuilder.aws/learning-plan/G8ENMJ5QBE/aws-artificial-intelligence-practitioner-learning-plan/SU2A1EJM1A',
+                duration: '8 hours'
             },
             {
                 name: 'Tutorial: Deploy any AI agent with AgentCore',
@@ -139,34 +139,35 @@ const contentData = {
         title: 'AWS Track - Intermediate',
         subtitle: 'Design enterprise-grade AI solutions',
         concepts: [
-            'Model customization (fine-tuning)',
-            'Multi-agent orchestration',
-            'Bedrock Studio workflows',
-            'Advanced guardrails and evaluation',
-            'Security and compliance (data residency, PII handling)'
+            'Multi-turn conversations, streaming responses, and structured data extraction',
+            'Automated development workflows and parallelized task execution',
+            'RAG systems with text chunking, embeddings, and hybrid search',
+            'Fine-tuning',
+            'Embeddings with vector database'
         ],
         tools: [
-            'SageMaker integration',
-            'LangChain with Bedrock',
-            'Step Functions for orchestration',
-            'CloudWatch for monitoring',
-            'MLOps basics (versioning, monitoring)'
+            'Amazon Bedrock',
+            'Amazon SageMaker',
+            'Amazon Simple Storage Service',
+            'LangChain',
+            'AWS Identity and Access Management',
+            'AWS Lambda',
         ],
         deliverables: [
             'Custom fine-tuned models',
             'Multi-agent solutions',
-            'Production monitoring setup'
+            'Implement safeguards and responsible AI policies'
         ],
         training: [
+            {
+                name: 'Course: Agentic AI Foundations',
+                url: 'https://skillbuilder.aws/learning-plan/HDZPWG63J3/agentic-ai-foundations/R4E9CC77T7',
+                duration: '6 hours'
+            },
             {
                 url: 'https://anthropic.skilljar.com/claude-in-amazon-bedrock',
                 name: 'Getting Started with Claude in Amazon Bedrock',
                 duration: '8 hour'
-            },
-            {
-                name: 'AWS AI Practitioner Learning Plan',
-                url: 'https://skillbuilder.aws/learning-plan/G8ENMJ5QBE/aws-artificial-intelligence-practitioner-learning-plan/SU2A1EJM1A',
-                duration: '8 hours'
             },
             {
                 name: 'Building Generative AI Applications Using Amazon Bedrock',
@@ -189,24 +190,26 @@ const contentData = {
         title: 'AWS Track - Expert',
         subtitle: 'Architect complex AI systems',
         concepts: [
-            'Advanced model optimization',
-            'Multi-region AI architectures',
-            'AI cost optimization strategies',
-            'Security and compliance at scale',
-            'AI governance frameworks'
+            'Foundation model integration',
+            'Multimodal data handling',
+            'Responsible AI & governance',
+            'Cost optimization & performance efficiency',
+            'AI evaluation & testing',
+            'Hallucination detection',
         ],
         tools: [
-            'Custom models on SageMaker',
-            'AWS Control Tower for AI governance',
-            'FinOps for AI',
-            'Advanced observability (X-Ray, CloudTrail)',
-            'Infrastructure as Code for AI (Terraform)'
+            'Amazon Bedrock',
+            'AWS Lambda',
+            'AWS Step Functions',
+            'SageMaker Model Cards',
+            'AWS Glue Data Catalog',
         ],
         deliverables: [
-            'Enterprise AI architecture',
-            'AWS AI Center of Excellence design',
-            'Thought leadership content',
-            'Custom models for specific domains'
+            'Enterprise AI architectures',
+            'Agentic AI workflows',
+            'Secure and governed AI systems',
+            'Cost‑efficient and monitored AI pipelines',
+            'Evaluation frameworks & QA processes',
         ],
         training: [
             {
