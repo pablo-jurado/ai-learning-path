@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Learning Path</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 1400px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-size: 28px;
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .level-box {
+            fill: #e3f2fd;
+            stroke: #1976d2;
+            stroke-width: 2;
+            rx: 8;
+        }
+
+        .foundation-box {
+            fill: #c0ffcd;
+            stroke: #2c923d;
+            stroke-width: 2;
+            rx: 8;
+        }
+
+        .aws-box {
+            fill: #fff8e1;
+            stroke: #ff9800;
+            stroke-width: 2;
+            rx: 8;
+        }
+
+        .azure-box {
+            fill: #e3f2fd;
+            stroke: #2196f3;
+            stroke-width: 2;
+            rx: 8;
+        }
+
+        .business-box {
+            fill: #f3e5f5;
+            stroke: #9c27b0;
+            stroke-width: 2;
+            rx: 8;
+        }
+
+        .level-text {
+            font-size: 14px;
+            font-weight: 600;
+            fill: #2c3e50;
+            text-anchor: middle;
+        }
+
+        .track-label {
+            font-size: 16px;
+            font-weight: bold;
+            text-anchor: middle;
+        }
+
+        .aws-text {
+            fill: #e65100;
+        }
+
+        .azure-text {
+            fill: #0d47a1;
+        }
+
+        .business-text {
+            fill: #6a1b9a;
+        }
+
+        .foundation-text {
+            fill: #007009;
+        }
+
+        .path-line {
+            fill: none;
+            stroke: #34495e;
+            stroke-width: 2;
+            stroke-linecap: round;
+        }
+
+        .aws-line {
+            stroke: #ff9800;
+        }
+
+        .azure-line {
+            stroke: #2196f3;
+        }
+
+        .business-line {
+            stroke: #9c27b0;
+        }
+
+        .clickable {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .clickable:hover rect {
+            filter: brightness(0.95);
+            stroke-width: 3;
+        }
+
+        .header-text {
+            font-size: 12px;
+            font-weight: 600;
+            fill: #546e7a;
+            text-anchor: middle;
+        }
+
+        .legend {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-color {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            border: 2px solid;
+        }
+
+        .legend-aws {
+            background: #fff8e1;
+            border-color: #ff9800;
+        }
+
+        .legend-azure {
+            background: #e3f2fd;
+            border-color: #2196f3;
+        }
+
+        .legend-business {
+            background: #f3e5f5;
+            border-color: #9c27b0;
+        }
+
+        .legend-foundation {
+            background: #c0ffcd;
+            border-color: #2c923d;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -450px;
+            width: 450px;
+            height: 100%;
+            background: white;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+            transition: right 0.3s ease;
+            z-index: 1001;
+            overflow-y: auto;
+        }
+
+        .sidebar.active {
+            right: 0;
+        }
+
+        .sidebar-header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sidebar-header h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 32px;
+            cursor: pointer;
+            padding: 0;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .close-btn:hover {
+            transform: scale(1.2);
+        }
+
+        .sidebar-content {
+            padding: 30px;
+        }
+
+        .sidebar-subtitle {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .sidebar-section {
+            margin-bottom: 30px;
+        }
+
+        .sidebar-section h3 {
+            color: #2c3e50;
+            font-size: 16px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .sidebar-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-section li {
+            padding: 8px 0 8px 20px;
+            position: relative;
+            line-height: 1.6;
+            color: #34495e;
+        }
+
+        .sidebar-section li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            z-index: 1000;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                right: -100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Learning Paths</h1>
+        
+        <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+            <!-- Column Headers -->
+            <text x="100" y="30" class="header-text">START</text>
+            <text x="350" y="30" class="header-text">BEGINNER</text>
+            <text x="600" y="30" class="header-text">INTERMEDIATE</text>
+            <text x="900" y="30" class="header-text">EXPERT</text>
+            
+            <!-- Foundation Level (START) -->
+            <g class="clickable" data-level="foundation">
+                <rect class="foundation-box" x="40" y="350" width="120" height="80"/>
+                <text x="100" y="375" class="level-text foundation-text">AI</text>
+                <text x="100" y="395" class="level-text foundation-text">FUNDAMENTALS</text>
+                <text x="100" y="415" class="level-text" style="font-size: 10px;">(Common Base)</text>
+            </g>
+            
+            <!-- AWS Track -->
+            <g class="clickable" data-level="aws-beginner">
+                <rect class="aws-box" x="290" y="80" width="120" height="80"/>
+                <text x="350" y="105" class="track-label aws-text">AWS Track</text>
+                <text x="350" y="125" class="level-text">Beginner</text>
+                <text x="350" y="143" class="level-text" style="font-size: 10px;">Bedrock APIs</text>
+            </g>
+            
+            <g class="clickable" data-level="aws-intermediate">
+                <rect class="aws-box" x="540" y="80" width="120" height="80"/>
+                <text x="600" y="110" class="level-text">Intermediate</text>
+                <text x="600" y="130" class="level-text" style="font-size: 10px;">Model</text>
+                <text x="600" y="145" class="level-text" style="font-size: 10px;">Customization</text>
+            </g>
+            
+            <g class="clickable" data-level="aws-expert">
+                <rect class="aws-box" x="840" y="80" width="120" height="80"/>
+                <text x="900" y="110" class="level-text">Expert</text>
+                <text x="900" y="130" class="level-text" style="font-size: 10px;">Enterprise</text>
+                <text x="900" y="145" class="level-text" style="font-size: 10px;">Architecture</text>
+            </g>
+            
+            <!-- Azure Track -->
+            <g class="clickable" data-level="azure-beginner">
+                <rect class="azure-box" x="290" y="260" width="120" height="80"/>
+                <text x="350" y="285" class="track-label azure-text">Azure Track</text>
+                <text x="350" y="305" class="level-text">Beginner</text>
+                <text x="350" y="323" class="level-text" style="font-size: 10px;">AI Foundry APIs</text>
+            </g>
+            
+            <g class="clickable" data-level="azure-intermediate">
+                <rect class="azure-box" x="540" y="260" width="120" height="80"/>
+                <text x="600" y="290" class="level-text">Intermediate</text>
+                <text x="600" y="310" class="level-text" style="font-size: 10px;">Prompt Flow &</text>
+                <text x="600" y="325" class="level-text" style="font-size: 10px;">Multi-Agent</text>
+            </g>
+            
+            <g class="clickable" data-level="azure-expert">
+                <rect class="azure-box" x="840" y="260" width="120" height="80"/>
+                <text x="900" y="290" class="level-text">Expert</text>
+                <text x="900" y="310" class="level-text" style="font-size: 10px;">AI Center of</text>
+                <text x="900" y="325" class="level-text" style="font-size: 10px;">Excellence</text>
+            </g>
+            
+            <!-- Business Track -->
+            <g class="clickable" data-level="business-beginner">
+                <rect class="business-box" x="290" y="440" width="120" height="80"/>
+                <text x="350" y="465" class="track-label business-text">Business Track</text>
+                <text x="350" y="485" class="level-text">Beginner</text>
+                <text x="350" y="503" class="level-text" style="font-size: 10px;">AI Use Cases</text>
+            </g>
+            
+            <g class="clickable" data-level="business-intermediate">
+                <rect class="business-box" x="540" y="440" width="120" height="80"/>
+                <text x="600" y="470" class="level-text">Intermediate</text>
+                <text x="600" y="490" class="level-text" style="font-size: 10px;">AI Strategy &</text>
+                <text x="600" y="505" class="level-text" style="font-size: 10px;">Governance</text>
+            </g>
+            
+            <g class="clickable" data-level="business-expert">
+                <rect class="business-box" x="840" y="440" width="120" height="80"/>
+                <text x="900" y="470" class="level-text">Expert</text>
+                <text x="900" y="490" class="level-text" style="font-size: 10px;">AI</text>
+                <text x="900" y="505" class="level-text" style="font-size: 10px;">Transformation</text>
+            </g>
+            
+            <!-- Paths from Foundation to Track Beginners -->
+            <path class="path-line aws-line" d="M 160 370 Q 225 200 290 120"/>
+            <path class="path-line azure-line" d="M 160 390 L 290 300"/>
+            <path class="path-line business-line" d="M 160 410 Q 225 450 290 480"/>
+            
+            <!-- AWS Track Linear Progression -->
+            <path class="path-line aws-line" d="M 410 120 L 540 120"/>
+            <path class="path-line aws-line" d="M 660 120 L 840 120"/>
+            
+            <!-- Azure Track Linear Progression -->
+            <path class="path-line azure-line" d="M 410 300 L 540 300"/>
+            <path class="path-line azure-line" d="M 660 300 L 840 300"/>
+            
+            <!-- Business Track Linear Progression -->
+            <path class="path-line business-line" d="M 410 480 L 540 480"/>
+            <path class="path-line business-line" d="M 660 480 L 840 480"/>
+            
+            <!-- Certification Endpoints -->
+            <text x="500" y="620" class="level-text" style="font-size: 13px; font-weight: bold;">Continuous Learning & Certifications</text>
+            <text x="250" y="660" class="level-text" style="font-size: 11px;">AWS: AI Practitioner → ML Specialty</text>
+            <text x="500" y="660" class="level-text" style="font-size: 11px;">Azure: AI Fundamentals → AI Engineer</text>
+            <text x="750" y="660" class="level-text" style="font-size: 11px;">Business: Executive Briefings → Thought Leadership</text>
+        </svg>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color legend-foundation"></div>
+                <span>Foundation (All Tracks)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color legend-aws"></div>
+                <span>AWS Track</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color legend-azure"></div>
+                <span>Azure Track</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color legend-business"></div>
+                <span>Business Track</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2 id="sidebar-title">Details</h2>
+            <button id="close-sidebar" class="close-btn">&times;</button>
+        </div>
+        <div id="sidebar-content" class="sidebar-content">
+            <!-- Content will be populated dynamically -->
+        </div>
+    </div>
+    <div id="overlay" class="overlay"></div>
+
+    <script>
+        // Content data for each level
+        const contentData = {
+            'foundation': {
+                title: 'AI Fundamentals',
+                subtitle: 'Common Base for All Tracks',
+                concepts: [
+                    'AI vs ML vs Deep Learning distinctions',
+                    'Supervised, unsupervised, and reinforcement learning basics',
+                    'Large Language Models (LLMs) overview',
+                    'Prompt engineering fundamentals',
+                    'AI ethics and responsible AI principles'
+                ],
+                tools: [
+                    'ChatGPT, Claude (hands-on experience)',
+                    'Azure AI Studio basics',
+                    'AWS Bedrock console navigation',
+                    'Basic API concepts'
+                ],
+                deliverables: [
+                    'Execute basic prompts',
+                    'Understand use case identification',
+                    'Recognize AI capabilities and limitations'
+                ]
+            },
+            'aws-beginner': {
+                title: 'AWS Track - Beginner',
+                subtitle: 'Build and deploy simple AI solutions',
+                concepts: [
+                    'Bedrock runtime APIs',
+                    'Knowledge Bases for RAG',
+                    'Guardrails implementation',
+                    'Agents for Bedrock',
+                    'Model selection criteria (cost, latency, performance)'
+                ],
+                tools: [
+                    'Boto3 (AWS Python SDK)',
+                    'AWS Lambda for AI',
+                    'Amazon Kendra',
+                    'OpenSearch Serverless',
+                    'Bedrock Playground'
+                ],
+                deliverables: [
+                    'Build Bedrock chatbot',
+                    'Implement RAG with Knowledge Bases',
+                    'Create serverless AI application'
+                ]
+            },
+            'aws-intermediate': {
+                title: 'AWS Track - Intermediate',
+                subtitle: 'Design enterprise-grade AI solutions',
+                concepts: [
+                    'Model customization (fine-tuning)',
+                    'Multi-agent orchestration',
+                    'Bedrock Studio workflows',
+                    'Advanced guardrails and evaluation',
+                    'Security and compliance (data residency, PII handling)'
+                ],
+                tools: [
+                    'SageMaker integration',
+                    'LangChain with Bedrock',
+                    'Step Functions for orchestration',
+                    'CloudWatch for monitoring',
+                    'MLOps basics (versioning, monitoring)'
+                ],
+                deliverables: [
+                    'Custom fine-tuned models',
+                    'Multi-agent solutions',
+                    'Production monitoring setup'
+                ]
+            },
+            'aws-expert': {
+                title: 'AWS Track - Expert',
+                subtitle: 'Architect complex AI systems',
+                concepts: [
+                    'Advanced model optimization',
+                    'Multi-region AI architectures',
+                    'AI cost optimization strategies',
+                    'Security and compliance at scale',
+                    'AI governance frameworks'
+                ],
+                tools: [
+                    'Custom models on SageMaker',
+                    'AWS Control Tower for AI governance',
+                    'FinOps for AI',
+                    'Advanced observability (X-Ray, CloudTrail)',
+                    'Infrastructure as Code for AI (Terraform)'
+                ],
+                deliverables: [
+                    'Enterprise AI architecture',
+                    'AWS AI Center of Excellence design',
+                    'Thought leadership content',
+                    'Custom models for specific domains'
+                ]
+            },
+            'azure-beginner': {
+                title: 'Azure Track - Beginner',
+                subtitle: 'Build and deploy simple AI solutions',
+                concepts: [
+                    'Azure OpenAI API integration',
+                    'Azure AI Search for RAG',
+                    'Prompt Flow',
+                    'Content Safety filters',
+                    'Model selection criteria'
+                ],
+                tools: [
+                    'Azure SDK for Python',
+                    'Azure Functions for AI',
+                    'Azure AI Search',
+                    'Document Intelligence',
+                    'Azure OpenAI Playground'
+                ],
+                deliverables: [
+                    'Build Azure OpenAI chatbot',
+                    'Implement RAG solution',
+                    'Deploy AI Functions'
+                ]
+            },
+            'azure-intermediate': {
+                title: 'Azure Track - Intermediate',
+                subtitle: 'Design enterprise-grade AI solutions',
+                concepts: [
+                    'Fine-tuning Azure OpenAI models',
+                    'Multi-agent patterns',
+                    'AI Studio project management',
+                    'Evaluation and benchmarking',
+                    'AI orchestration patterns'
+                ],
+                tools: [
+                    'Azure ML pipelines',
+                    'Semantic Kernel',
+                    'Azure Monitor for AI',
+                    'Responsible AI dashboard',
+                    'Prompt flow and experimentation tools'
+                ],
+                deliverables: [
+                    'Custom Azure OpenAI models',
+                    'Complex Prompt Flow solutions',
+                    'Enterprise deployment patterns'
+                ]
+            },
+            'azure-expert': {
+                title: 'Azure Track - Expert',
+                subtitle: 'Architect complex AI systems',
+                concepts: [
+                    'Enterprise-scale AI patterns',
+                    'Hybrid and multi-cloud AI',
+                    'AI governance automation',
+                    'Advanced cost optimization',
+                    'Performance optimization at scale'
+                ],
+                tools: [
+                    'Azure ML advanced features',
+                    'Azure Arc for AI',
+                    'Azure Policy for AI governance',
+                    'Cost Management analytics',
+                    'Infrastructure as Code (Bicep)'
+                ],
+                deliverables: [
+                    'Enterprise AI architecture',
+                    'Azure AI Center of Excellence design',
+                    'Thought leadership content',
+                    'End-to-end AI solution architecture'
+                ]
+            },
+            'business-beginner': {
+                title: 'Business Track - Beginner',
+                subtitle: 'AI for Sales & Pursuits',
+                concepts: [
+                    'AI terminology (LLM, RAG, fine-tuning, agents)',
+                    'AI use cases by industry and function',
+                    'ROI and business value of AI',
+                    'AI risks and ethical considerations',
+                    'Customer journey with AI'
+                ],
+                tools: [
+                    'ChatGPT, Claude, Copilot (user level)',
+                    'Demo environments',
+                    'AI presentation templates',
+                    'AI ROI calculators',
+                    'Case study library'
+                ],
+                deliverables: [
+                    'Identify client AI opportunities',
+                    'Articulate business benefits',
+                    'Handle objections and concerns',
+                    'Scope AI projects',
+                    'Create compelling presentations'
+                ]
+            },
+            'business-intermediate': {
+                title: 'Business Track - Intermediate',
+                subtitle: 'AI Strategy & Leadership',
+                concepts: [
+                    'AI governance and compliance',
+                    'Build vs buy decisions',
+                    'AI partner ecosystems',
+                    'AI implementation roadmaps',
+                    'Success metrics and KPIs',
+                    'Change management for AI adoption'
+                ],
+                tools: [
+                    'TCO modeling tools',
+                    'Risk assessment frameworks',
+                    'AI maturity assessments',
+                    'Executive dashboards',
+                    'Proposal templates'
+                ],
+                deliverables: [
+                    'Lead AI strategy sessions',
+                    'Design governance frameworks',
+                    'Develop business cases',
+                    'Negotiate AI contracts',
+                    'Conduct executive briefings'
+                ]
+            },
+            'business-expert': {
+                title: 'Business Track - Expert',
+                subtitle: 'AI Transformation Leadership',
+                concepts: [
+                    'AI transformation leadership',
+                    'Industry-specific AI solutions',
+                    'AI M&A and partnerships',
+                    'Future of work with AI',
+                    'Ethical AI leadership',
+                    'AI innovation strategies'
+                ],
+                tools: [
+                    'Executive AI simulations',
+                    'Industry benchmarking tools',
+                    'Innovation labs and proofs of concept',
+                    'Advisory board frameworks',
+                    'Thought leadership platforms'
+                ],
+                deliverables: [
+                    'Lead C-suite AI strategy',
+                    'Drive major AI deals ($1M+)',
+                    'Speak at conferences',
+                    'Build AI practices',
+                    'Mentor teams on AI sales'
+                ]
+            }
+        };
+
+        // Sidebar functionality
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const closeSidebar = document.getElementById('close-sidebar');
+        const sidebarTitle = document.getElementById('sidebar-title');
+        const sidebarContent = document.getElementById('sidebar-content');
+
+        function openSidebar(level) {
+            const data = contentData[level];
+            if (!data) return;
+
+            sidebarTitle.textContent = data.title;
+            
+            let content = `<p class="sidebar-subtitle">${data.subtitle}</p>`;
+            
+            content += '<div class="sidebar-section">';
+            content += '<h3>Concepts</h3>';
+            content += '<ul>';
+            data.concepts.forEach(item => {
+                content += `<li>${item}</li>`;
+            });
+            content += '</ul>';
+            content += '</div>';
+            
+            content += '<div class="sidebar-section">';
+            content += '<h3>Tools & Technologies</h3>';
+            content += '<ul>';
+            data.tools.forEach(item => {
+                content += `<li>${item}</li>`;
+            });
+            content += '</ul>';
+            content += '</div>';
+            
+            content += '<div class="sidebar-section">';
+            content += '<h3>Deliverables</h3>';
+            content += '<ul>';
+            data.deliverables.forEach(item => {
+                content += `<li>${item}</li>`;
+            });
+            content += '</ul>';
+            content += '</div>';
+            
+            sidebarContent.innerHTML = content;
+            sidebar.classList.add('active');
+            overlay.classList.add('active');
+        }
+
+        function closeSidebarFunc() {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+
+        // Add click handlers
+        document.querySelectorAll('.clickable').forEach(element => {
+            element.addEventListener('click', function() {
+                const level = this.getAttribute('data-level');
+                openSidebar(level);
+            });
+        });
+
+        closeSidebar.addEventListener('click', closeSidebarFunc);
+        overlay.addEventListener('click', closeSidebarFunc);
+
+        // Optional: Add hover effect
+        document.querySelectorAll('.clickable').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.opacity = '0.8';
+            });
+            element.addEventListener('mouseleave', function() {
+                this.style.opacity = '1';
+            });
+        });
+    </script>
+</body>
+</html>
