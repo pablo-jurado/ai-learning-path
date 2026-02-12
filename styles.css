@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f5f7fa;
+    background: #232b69;
     padding: 40px 20px;
     display: flex;
     justify-content: center;
@@ -18,7 +18,8 @@ body {
     background: white;
     border-radius: 12px;
     padding: 40px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+    box-shadow:0px 20px 20px 7px rgba(0, 0, 0, 0.4); 
     max-width: 1400px;
     width: 100%;
 }
@@ -197,7 +198,7 @@ svg {
 }
 
 .sidebar-header {
-    background: #2c3e50;
+    background: #318e9c;
     color: white;
     padding: 20px;
     position: sticky;
@@ -311,7 +312,7 @@ svg {
 }
 
 .toggle-icon {
-    color: #3498db;
+    color: #318e9c;
     font-size: 12px;
     font-weight: bold;
     transition: transform 0.2s;
@@ -364,7 +365,7 @@ svg {
 .training-item {
     padding: 12px;
     background: #f8f9fa;
-    border-left: 3px solid #3498db;
+    border-left: 3px solid #318e9c;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
@@ -372,7 +373,7 @@ svg {
 }
 
 .training-link {
-    color: #2980b9;
+    color: #318e9c;
     text-decoration: none;
     font-weight: 500;
     display: flex;
