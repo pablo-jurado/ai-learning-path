@@ -3,24 +3,75 @@ const contentData = {
         title: 'AI Fundamentals',
         subtitle: 'Common Base for All Tracks',
         concepts: [
-            'AI vs ML vs Deep Learning distinctions',
-            'Supervised, unsupervised, and reinforcement learning basics',
             'Large Language Models (LLMs) overview',
+            'Generative AI use cases and applications',
+            'Agents and their capabilities',
             'Prompt engineering fundamentals',
-            'AI ethics and responsible AI principles'
+            'MCP servers',
+            'RAG (Retrieval-Augmented Generation) basics',
+            'Vector databases and embeddings',
+            'AI vs ML vs Deep Learning distinctions',
         ],
         tools: [
-            'ChatGPT, Claude (hands-on experience)',
-            'Azure AI Studio basics',
-            'AWS Bedrock console navigation',
-            'Basic API concepts'
+            'Copilot' , 'Anthropic Claude' , 'OpenAI ChatGPT',
         ],
         deliverables: [
             'Execute basic prompts',
             'Understand use case identification',
-            'Recognize AI capabilities and limitations'
+            'Recognize AI capabilities and limitations',
         ],
         training: [
+            {
+                name: 'How LLMs work',
+                url:'https://www.youtube.com/watch?v=LPZh9BOjkQs',
+                duration: '10 minutes',
+
+            },
+            {
+                name: 'Context Window',
+                url: 'https://www.youtube.com/watch?v=-QVoIxEpFkM',
+                duration: '10 minutes',
+
+            },
+            {
+                name: 'What are AI Agents?',
+                url: 'https://www.youtube.com/watch?v=FwOTs4UxQS4',
+                duration: '10 minutes',
+            },
+            {
+                name: 'What is RAG (Retrieval-Augmented Generation)?',
+                url: 'https://www.youtube.com/watch?v=T-D1OfcDW1M',
+                duration: '7 minutes',
+            },  
+            {
+                name: 'Vector Databases Explained',
+                url: 'https://www.youtube.com/watch?v=gl1r1XV0SLw',
+                duration: '10 minutes',
+            },
+            {
+                name: 'Building Effective Agents',
+                url: 'https://www.anthropic.com/engineering/building-effective-agents',
+                duration: '5 minutes',
+            },
+            {
+                name: 'AI vs ML',
+                url: 'https://www.youtube.com/watch?v=qYNweeDHiyU',
+                duration: '10 minutes',
+            },
+            {
+                name: 'Intro to MCP',
+                url: 'https://anthropic.skilljar.com/introduction-to-model-context-protocol',
+                duration: '1 hour',
+            },
+            {
+                name: 'Advanced MCP',
+                url: 'https://anthropic.skilljar.com/model-context-protocol-advanced-topics',
+                duration: '1 hour',
+            },
+            {   name: 'Claude 101 - Foundations of AI with Claude',
+                url: 'https://anthropic.skilljar.com/claude-101',
+                duration: '1 hour',
+            },
             {
                 name: 'Prompt Engineering Overview',
                 url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview',
@@ -31,21 +82,6 @@ const contentData = {
                 url: 'https://www.promptingguide.ai/',
                 duration: ''
             },
-            {
-                name: 'Building Effective Agents',
-                url: 'https://www.anthropic.com/engineering/building-effective-agents',
-                duration: ''
-            },
-            {
-                name: 'Intro to MCP',
-                url: 'https://anthropic.skilljar.com/introduction-to-model-context-protocol',
-                duration: ''
-            },
-            {
-                name: 'Advanced MCP',
-                url: 'https://anthropic.skilljar.com/model-context-protocol-advanced-topics',
-                duration: ''
-            }
         ]
     },
     'aws-beginner': {
@@ -106,6 +142,11 @@ const contentData = {
             'Production monitoring setup'
         ],
         training: [
+            {
+                url: 'https://anthropic.skilljar.com/claude-in-amazon-bedrock',
+                name: 'Getting Started with Claude in Amazon Bedrock',
+                duration: '8 hour'
+            },
             {
                 name: 'AWS AI Practitioner Learning Plan',
                 url: 'https://skillbuilder.aws/learning-plan/G8ENMJ5QBE/aws-artificial-intelligence-practitioner-learning-plan/SU2A1EJM1A',
