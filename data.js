@@ -221,32 +221,23 @@ const contentData = {
     },
     'azure-beginner': {
         title: 'Azure Track - Beginner',
-        subtitle: 'Build and deploy simple AI solutions',
+        subtitle: 'Learn core AI concepts and Azure Services',
         concepts: [
-            'Azure OpenAI API integration',
-            'Azure AI Search for RAG',
-            'Prompt Flow',
-            'Content Safety filters',
-            'Model selection criteria'
+            '(LLMs), prompts, and AI agents',
+            'Natural language processing (NLP)',
+            'Text analysis',
+            'Speech recognition and synthesis',
+            'Computer vision concepts',
         ],
         tools: [
-            'Azure SDK for Python',
-            'Azure Functions for AI',
-            'Azure AI Search',
-            'Document Intelligence',
-            'Azure OpenAI Playground'
+            'Azure Foundry',
+            'Azure Vision service',
+            'Azure Language text analysis features,',
         ],
         deliverables: [
-            'Build Azure OpenAI chatbot',
-            'Implement RAG solution',
-            'Deploy AI Functions'
+            'Microsoft Certification - Azure AI Fundamentals',
         ],
         training: [
-            {
-                name: 'Introduction to AI in Azure',
-                url: 'https://learn.microsoft.com/en-us/training/paths/introduction-to-ai-in-azure/',
-                duration: '11 hours'
-            },
             {
                 name: 'AI Concepts Overview',
                 url: 'https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/',
@@ -400,16 +391,10 @@ const contentData = {
             'Performance optimization at scale'
         ],
         tools: [
-            'Azure ML advanced features',
-            'Azure Arc for AI',
-            'Azure Policy for AI governance',
-            'Cost Management analytics',
-            'Infrastructure as Code (Bicep)'
+            'TODO'
         ],
         deliverables: [
             'Enterprise AI architecture',
-            'Azure AI Center of Excellence design',
-            'Thought leadership content',
             'End-to-end AI solution architecture'
         ],
         training: [
