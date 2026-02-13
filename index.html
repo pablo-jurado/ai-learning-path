@@ -1,150 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Learning Path Diagram</title>
+    <title>AI Learning Path</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
-        <h1>AI Learning Paths</h1>
-        
-        <svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
-            <!-- Column Headers -->
-            <text x="100" y="30" class="header-text">START</text>
-            <text x="350" y="30" class="header-text">BEGINNER</text>
-            <text x="620" y="30" class="header-text">INTERMEDIATE</text>
-            <text x="900" y="30" class="header-text">EXPERT</text>
-            
-            <!-- Foundation Level (START) -->
-            <g class="clickable" data-level="foundation">
-                <rect class="foundation-box" x="40" y="260" width="120" height="80"/>
-                <text x="100" y="285" class="level-text foundation-text">AI</text>
-                <text x="100" y="305" class="level-text foundation-text">FUNDAMENTALS</text>
-                <text x="100" y="323" class="level-text" style="font-size: 10px;">(Common Base)</text>
-            </g>
-            
-            <!-- AWS Track -->
-            <g class="clickable" data-level="aws-beginner">
-                <rect class="aws-box" x="290" y="80" width="120" height="80"/>
-                <text x="350" y="105" class="track-label aws-text">AWS Track</text>
-                <text x="350" y="125" class="level-text">Beginner</text>
-                <text x="350" y="143" class="level-text" style="font-size: 10px;">Bedrock APIs</text>
-            </g>
-            
-            <g class="clickable" data-level="aws-intermediate">
-                <rect class="aws-box" x="560" y="80" width="120" height="80"/>
-                <text x="620" y="110" class="level-text">Intermediate</text>
-                <text x="620" y="130" class="level-text" style="font-size: 10px;">AI</text>
-                <text x="620" y="145" class="level-text" style="font-size: 10px;">Engineer</text>
-            </g>
-            
-            <g class="clickable" data-level="aws-expert">
-                <rect class="aws-box" x="840" y="80" width="120" height="80"/>
-                <text x="900" y="110" class="level-text">Expert</text>
-                <text x="900" y="130" class="level-text" style="font-size: 10px;">AI</text>
-                <text x="900" y="145" class="level-text" style="font-size: 10px;">Architecture</text>
-            </g>
-            
-            <!-- Azure Track -->
-            <g class="clickable" data-level="azure-beginner">
-                <rect class="azure-box" x="290" y="260" width="120" height="80"/>
-                <text x="350" y="285" class="track-label azure-text">Azure Track</text>
-                <text x="350" y="305" class="level-text">Beginner</text>
-                <text x="350" y="323" class="level-text" style="font-size: 10px;">AI Foundry APIs</text>
-            </g>
-            
-            <g class="clickable" data-level="azure-intermediate">
-                <rect class="azure-box" x="560" y="260" width="120" height="80"/>
-                <text x="620" y="290" class="level-text">Intermediate</text>
-                <text x="620" y="310" class="level-text" style="font-size: 10px;">AI</text>
-                <text x="620" y="325" class="level-text" style="font-size: 10px;">Engineer</text>
-            </g>
-            
-            <g class="clickable" data-level="azure-expert">
-                <rect class="azure-box" x="840" y="260" width="120" height="80"/>
-                <text x="900" y="290" class="level-text">Expert</text>
-                <text x="900" y="310" class="level-text" style="font-size: 10px;"></text>
-                <text x="900" y="325" class="level-text" style="font-size: 10px;"></text>
-            </g>
-            
-            <!-- Business Track -->
-            <g class="clickable" data-level="business-beginner">
-                <rect class="business-box" x="290" y="440" width="120" height="80"/>
-                <text x="350" y="465" class="track-label business-text">Business Track</text>
-                <text x="350" y="485" class="level-text">Beginner</text>
-                <text x="350" y="503" class="level-text" style="font-size: 10px;">AI Use Cases</text>
-            </g>
-            
-            <g class="clickable" data-level="business-intermediate">
-                <rect class="business-box" x="560" y="440" width="120" height="80"/>
-                <text x="620" y="470" class="level-text">Intermediate</text>
-                <text x="620" y="490" class="level-text" style="font-size: 10px;">AI Strategy &</text>
-                <text x="620" y="505" class="level-text" style="font-size: 10px;">Governance</text>
-            </g>
-            
-            <g class="clickable" data-level="business-expert">
-                <rect class="business-box" x="840" y="440" width="120" height="80"/>
-                <text x="900" y="470" class="level-text">Expert</text>
-                <text x="900" y="490" class="level-text" style="font-size: 10px;">AI</text>
-                <text x="900" y="505" class="level-text" style="font-size: 10px;">Transformation</text>
-            </g>
-            
-            <!-- Paths from Foundation to Track Beginners -->
-            <path class="path-line aws-line" d="M 160 300 Q 225 200 290 120"/>
-            <path class="path-line azure-line" d="M 160 300 L 290 300"/>
-            <path class="path-line business-line" d="M 160 300 Q 225 390 290 480"/>
-            
-            <!-- AWS Track Linear Progression -->
-            <path class="path-line aws-line" d="M 410 120 L 560 120"/>
-            <path class="path-line aws-line" d="M 680 120 L 840 120"/>
-            
-            <!-- Azure Track Linear Progression -->
-            <path class="path-line azure-line" d="M 410 300 L 560 300"/>
-            <path class="path-line azure-line" d="M 680 300 L 840 300"/>
-            
-            <!-- Business Track Linear Progression -->
-            <path class="path-line business-line" d="M 410 480 L 560 480"/>
-            <path class="path-line business-line" d="M 680 480 L 840 480"/>
-        </svg>
-
-        <div class="legend">
-            <div class="legend-item">
-                <div class="legend-color legend-foundation"></div>
-                <span>Foundation (All Tracks)</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color legend-aws"></div>
-                <span>AWS Track</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color legend-azure"></div>
-                <span>Azure Track</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color legend-business"></div>
-                <span>Business Track</span>
-            </div>
+        <div class="header">
+            <div class="header-label">Interactive Roadmap</div>
+            <h1 id="page-title">AI Master Roadmap</h1>
+            <p>Explore Path based on your learning goals</p>
+        </div>
+        <div class="tabs" id="tabs">
+            <a class="tab" href="./skills/index.html">
+                Complete Roadmap
+            </a>
+            <a class="tab" href="./cloud/index.html">
+                Cloud Certifications
+            </a>
+            <a class="tab" href="./tree/index.html">
+                High-Level Overview
+            </a>
         </div>
     </div>
-
-    <!-- Sidebar -->
-    <div id="sidebar" class="sidebar">
-        <div class="sidebar-header">
-            <h2 id="sidebar-title">Details</h2>
-            <div class="sidebar-header-actions">
-                <button id="toggle-all-btn" class="toggle-all-btn" title="Expand/Collapse All">Collapse All</button>
-                <button id="close-sidebar" class="close-btn">&times;</button>
-            </div>
-        </div>
-        <div id="sidebar-content" class="sidebar-content">
-            <!-- Content will be populated dynamically -->
-        </div>
-    </div>
-    <div id="overlay" class="overlay"></div>
-
-    <script src="data.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
