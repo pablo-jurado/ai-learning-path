@@ -158,27 +158,11 @@ const DATA = [
                     "name": "Models",
                     "children": [
                       {
-                        "name": "Claude Opus 4.5",
-                        "description": "Anthropic's most powerful and intelligent model. Excels at complex analysis, nuanced understanding, creative tasks, and multi-step reasoning. Best suited for the hardest problems requiring depth.",
-                        "tags": ["LLM", "Flagship", "Reasoning"],
+                        "name": "Anthropic Models Overview",
+                        "description": "Anthropic's family of large language models designed with a focus on safety, reliability, and helpfulness. Models are optimized for reasoning, tool use, and multimodal understanding across a range of applications.",
+                        "tags": ["Claude Opus 4.6", "Claude Sonnet 4.5", "Claude Haiku 4.5"],
                         "sources": [
-                          { "label": "Claude Models Overview", "url": "https://docs.anthropic.com/en/docs/about-claude/models" }
-                        ]
-                      },
-                      {
-                        "name": "Claude Sonnet 4.5",
-                        "description": "Anthropic's best balance of intelligence and speed. Excels at coding, analysis, and complex tasks while maintaining fast response times. The most popular model for production use.",
-                        "tags": ["LLM", "Balanced", "Production"],
-                        "sources": [
-                          { "label": "Claude Models Overview", "url": "https://docs.anthropic.com/en/docs/about-claude/models" }
-                        ]
-                      },
-                      {
-                        "name": "Claude Haiku 4.5",
-                        "description": "Anthropic's fastest and most compact model. Designed for quick responses, high-throughput tasks, and cost-effective use cases while still maintaining strong reasoning capabilities.",
-                        "tags": ["LLM", "Fast", "Cost-effective"],
-                        "sources": [
-                          { "label": "Claude Models Overview", "url": "https://docs.anthropic.com/en/docs/about-claude/models" }
+                          { "label": "Claude Models Overview", "url": "https://platform.claude.com/docs/en/about-claude/models/overview" }
                         ]
                       }
                     ]
