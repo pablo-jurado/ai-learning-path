@@ -131,7 +131,7 @@ const DATA = [
         "colorLight": "#ECFDF5",
         "colorBorder": "#A7F3D0",
         "children": [
-             {
+          {
             "name": "Cloud Platforms",
             "children": [
               {
@@ -166,15 +166,40 @@ const DATA = [
           },
           {
             "name": "Connecting to MCP servers - TODO",
-            "children": [{}]
+            "children": [
+              {
+                "name": "MCP Advance Topics",
+                "description": "Learn how to build modular AI applications using MCP to connect Claude with external tools and data sources. Deep dive into MCP's advanced features including sampling, notifications, and transport implementations",
+                "sources": [
+                  {
+                    "label": 'Intro to MCP',
+                    "url": 'https://anthropic.skilljar.com/introduction-to-model-context-protocol',
+                  },
+                  {
+                    "label": 'Advanced MCP',
+                    "url": 'https://anthropic.skilljar.com/model-context-protocol-advanced-topics',
+                  },
+                ]
+              },
+            ]
           },
           {
             "name": "Creating RAG Pipelines - TODO",
             "children": [{}]
           },
-                    {
+          {
             "name": "Frameworks",
             "children": [
+              {
+                "name": "Amazon Agent Core",
+                "description": "Amazon Bedrock AgentCore is an agentic platform for building, deploying, and operating highly effective agents securely at scale using any framework and foundation model",
+                "tags": ["Framework", "AWS", "Agentic AI"],
+                "sources": [
+                  { "label": "Agent Core Docs", "url": "https://docs.aws.amazon.com/bedrock-agentcore/"},
+                  { "label": "Agent Core - Getting Started Toolkit", "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-get-started-toolkit.html" },
+
+                ]
+              },
               {
                 "name": "Semantic Kernel",
                 "description": "Microsoft's open-source SDK for integrating LLMs into applications. Supports C#, Python, and Java with a plugin architecture, planners, and memory connectors for enterprise AI development.",
@@ -182,7 +207,7 @@ const DATA = [
                 "sources": [
                   { "label": "Semantic Kernel Docs", "url": "https://learn.microsoft.com/en-us/semantic-kernel/" },
                   { "label": "GitHub Repository", "url": "https://github.com/microsoft/semantic-kernel" },
-                  { "label": "Semantic Kernel Tutorial", "url": "https://www.youtube.com/watch?v=ewHPdDtmHj4&list=PLyqwquIuSMZpGDiocmT-M67dcDxjWmoYK&index=20" }
+                  { "label": "Semantic Kernel Tutorial", "url": "https://www.youtube.com/watch?v=ewHPdDtmHj4&list=PLyqwquIuSMZpGDiocmT-M67dcDxjWmoYK&index=20" },
                 ]
               },
               {
@@ -202,7 +227,7 @@ const DATA = [
                 "sources": [
                   { "label": "Microsoft Agent Framework Docs", "url": "https://learn.microsoft.com/en-us/agent-framework/overview/?pivots=programming-language-csharp" },
                   { "label": "GitHub Repository", "url": "https://github.com/microsoft/agent-framework" },
-                  { "label": "Microsoft Agent Framework tutorial", "url": "https://www.youtube.com/watch?v=EAeUiipzCTE"}
+                  { "label": "Microsoft Agent Framework tutorial", "url": "https://www.youtube.com/watch?v=EAeUiipzCTE" }
                 ]
               },
               {
@@ -240,15 +265,195 @@ const DATA = [
         "colorBorder": "#FBCFE8",
         "children": [
           {
-            "name": "Microsoft Azure AI Certifications",
-            "children": [{}]
+            "name": "AWS AI Certifications",
+            "children": [
+              {
+                "name": "AWS Track - Beginner",
+                "description": "Build and deploy simple AI solutions. Learn core AI concepts, responsible AI principles. Customizing Agentic Solutions and Implementing Agentic AI Frameworks",
+                "tags": ['AWS Bedrock', 'Agentcore'],
+                "sources": [
+                  {
+                    "label": 'Course: Fundamentals of Generative AI',
+                    "url": 'https://skillbuilder.aws/learn/FKXM21R555/fundamentals-of-generative-ai/ZFX96NREH4',
+                  },
+                  {
+                    "label": 'AWS AI Practitioner Learning Plan',
+                    "url": 'https://skillbuilder.aws/learning-plan/G8ENMJ5QBE/aws-artificial-intelligence-practitioner-learning-plan/SU2A1EJM1A',
+                  },
+                  {
+                    "label": 'Tutorial: Deploy any AI agent with AgentCore',
+                    "url": 'https://www.youtube.com/watch?v=N7FGbBq1mI4',
+                  },
+                  {
+                    "label": 'Tutorial: Bedrock Running in Lambda',
+                    "url": 'https://www.youtube.com/watch?v=7PK4zdUgAt0',
+                  },
+                  {
+                    "label": 'Amazon Bedrock Agent Core Getting Started',
+                    "url": 'https://skillbuilder.aws/learn/SXMNDA9AJ1/amazon-bedrock-agentcore-getting-started/6SGJD8ZV9A',
+                  },
+                  {
+                    "label": 'Documentation: Amazon Bedrock',
+                    "url": 'https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html',
+                  }
+                ]
+              },
+              {
+                "name": "AWS Track - Intermediate",
+                "description": "Design enterprise-grade AI solutions. Learn about multi-turn conversations, streaming responses, and structured data extraction. Automated development workflows and parallelized task execution. RAG systems with text chunking, embeddings, and hybrid search. Fine-tuning. Embeddings with vector database",
+                "tags": ['Amazon Bedrock', 'Amazon SageMaker', 'Amazon Simple Storage Service', 'LangChain', 'AWS Identity and Access Management', 'AWS Lambda'],
+                "sources": [
+                  {
+                    "label": 'Course: Agentic AI Foundations',
+                    "url": 'https://skillbuilder.aws/learning-plan/HDZPWG63J3/agentic-ai-foundations/R4E9CC77T7',
+                  },
+                  {
+                    "label": 'Getting Started with Claude in Amazon Bedrock',
+                    "url": 'https://anthropic.skilljar.com/claude-in-amazon-bedrock',
+                  },
+                  {
+                    "label": 'Building Generative AI Applications Using Amazon Bedrock',
+                    "url": 'https://skillbuilder.aws/learn/TM4ZAXTGEZ/building-generative-ai-applications-using-amazon-bedrock/WM6Z6ZHU7K',
+                  },
+                  {
+                    "label": 'Generative AI Learning Plan for Developers',
+                    "url": 'https://skillbuilder.aws/learning-plan/5C9XQBTXBB/generative-ai-learning-plan-for-developers-includes-labs/EGATKJP13J',
+                  },
+                  {
+                    "label": 'Digital Classroom - Developing Generative AI Applications',
+                    "url": 'https://skillbuilder.aws/learn/7UWY7BAE4X/digital-classroom--developing-generative-ai-applications-on-aws/4FBWZ9EK8X',
+                  }
+                ]
+              },
+              {
+                "name": "AWS Track - Expert",
+                "description": "Architect complex AI systems. Learn about foundation model integration, multimodal data handling, responsible AI & governance, cost optimization & performance efficiency, AI evaluation & testing, and hallucination detection.",
+                "tags": ['Amazon Bedrock', 'AWS Lambda', 'AWS Step Functions', 'SageMaker Model Cards', 'AWS Glue Data Catalog'],
+                "sources": [
+                  {
+                    "label": 'AWS Generative AI Developer Advanced Learning Plan',
+                    "url": 'https://skillbuilder.aws/learning-plan/BGTH16YCTU/aws-generative-ai-developer-advanced-learning-plan-includes-labs/ZDN46CX881',
+                  }
+
+                ]
+
+              }
+            ]
           },
           {
-            "name": "AWS AI Certifications",
-            "children": [{}]
+            "name": "Microsoft Azure AI Certifications",
+            "children": [
+              {
+                "name": "Azure Track - Beginner",
+                "description": "Learn core AI concepts and Azure Services. Learn about LLMs, prompts, and AI agents. Natural language processing (NLP). Text analysis. Speech recognition and synthesis. Computer vision concepts.",
+                "tags": ['Azure Foundry', 'Azure Vision service', 'Azure Language text analysis features'],
+                "sources": [
+                  {
+                    "label": 'AI Concepts Overview',
+                    "url": 'https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/',
+                  },
+                  {
+                    "label": 'Get Started with Microsoft Foundry',
+                    "url": 'https://learn.microsoft.com/en-us/training/modules/get-started-ai-in-foundry/',
+                  },
+                  {
+                    "label": 'Introduction to Generative AI and Agents',
+                    "url": 'https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/',
+                  },
+                  {
+                    "label": 'Get Started with Generative AI in Microsoft Foundry',
+                    "url": 'https://learn.microsoft.com/en-us/training/modules/get-started-generative-ai-azure/',
+                  },
+                  {
+                    "label": 'Text Analysis Concepts',
+                    "url": 'https://learn.microsoft.com/en-us/training/modules/introduction-language/',
+                  },
+                  {
+                    "label": 'Get Started with Text Analysis in Microsoft Foundry',
+                    "url": 'https://learn.microsoft.com/en-us/training/modules/get-started-language-azure/',
+                  },
+                  {
+                    "label": 'Introduction to AI Speech Concepts',
+                    "url": 'https://learn.microsoft.com/en-us/training/modules/introduction-ai-speech/',
+                  },
+                  {
+                    "label": 'Introduction to Computer Vision Concepts',
+                    "url": 'https://learn.microsoft.com/en-us/training/modules/introduction-computer-vision/',
+                  },
+                  {
+                    "label": 'Get Started with Computer Vision in Microsoft Foundry',
+                    "url": 'https://learn.microsoft.com/en-us/training/modules/get-started-computer-vision-azure/',
+                  },
+                  {
+                    "label": 'AI-Powered Information Extraction Concepts',
+                    "url": 'https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction/',
+                  },
+                  {
+                    "label": 'Get Started with AI-Powered Information Extraction',
+                    "url": 'https://learn.microsoft.com/en-us/training/modules/ai-information-extraction/',
+                  },
+                  {
+                    "label": '🏆 Certification: Azure AI Fundamentals (AI-900)',
+                    "url": 'https://learn.microsoft.com/en-us/certifications/azure-ai-fundamentals/',
+                  }
+                ]
+              },
+              {
+                "name": "Azure Track - Intermediate",
+                "description": "Design enterprise-grade AI solutions. Learn about developing generative AI applications, implementing computer vision solutions, implementing information extraction solutions, using REST APIs and SDKs, and language analysis in AI systems.",
+                "tags": ['Azure Foundry', 'Semantic Kernel', 'Azure AI Services (e.g., vision, language, information extraction services)', 'C#', 'Python', 'REST‑based APIs', 'Azure SDKs'],
+                "sources": [
+                  {
+                    "label": 'Develop Generative AI Apps in Azure',
+                    "url": 'https://learn.microsoft.com/en-us/training/paths/create-custom-copilots-ai-studio/',
+                  },
+                  {
+                    "label": 'Develop AI Agents on Azure',
+                    "url": 'https://learn.microsoft.com/en-us/training/paths/develop-ai-agents-on-azure/',
+                  },
+                  {
+                    "label": 'Develop Natural Language Solutions in Azure',
+                    "url": 'https://learn.microsoft.com/en-us/training/paths/develop-language-solutions-azure-ai/',
+                  },
+                  {
+                    "label": 'Develop Computer Vision Solutions in Azure',
+                    "url": 'https://learn.microsoft.com/en-us/training/paths/create-computer-vision-solutions-azure-ai/',
+                  },
+                  {
+                    "label": 'Develop AI Information Extraction Solutions',
+                    "url": 'https://learn.microsoft.com/en-us/training/paths/ai-extract-information/',
+                  },
+                  {
+                    "label": 'Create an AI Agent (Applied Skills)',
+                    "url": 'https://learn.microsoft.com/en-us/credentials/applied-skills/create-an-ai-agent/',
+                  },
+                  {
+                    "label": 'Build a Generative AI Chat App (Applied Skills)',
+                    "url": 'https://learn.microsoft.com/en-us/credentials/applied-skills/build-a-generative-ai-chat-app/',
+                  },
+                  {
+                    "label": 'Develop Generative AI Apps with Semantic Kernel',
+                    "url": 'https://learn.microsoft.com/en-us/credentials/applied-skills/develop-ai-agents-using-microsoft-azure-openai-and-semantic-kernel/',
+                  },
+                  {
+                    "label": 'Implement Knowledge Mining with AI Search',
+                    "url": 'https://learn.microsoft.com/en-us/credentials/applied-skills/implement-knowledge-mining-with-azure-ai-search/',
+                  },
+                  {
+                    "label": 'Build a Natural Language Processing Solution',
+                    "url": 'https://learn.microsoft.com/en-us/credentials/applied-skills/build-natural-language-solution-azure-ai/',
+                  },
+                  {
+                    "label": '🏆 Certification: Azure AI Engineer Associate',
+                    "url": 'https://learn.microsoft.com/en-us/certifications/azure-ai-engineer/',
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
     ]
   }
 ];
+
