@@ -1,0 +1,77 @@
+import { useState, useEffect } from 'react'
+import type { DataNode } from '../data'
+import { isLeaf } from '../utils'
+import { LeafCard } from './LeafCard'
+
+interface AccordionProps {
+  node: DataNode
+  depth: number
+  accentColor: string
+  isTopLevel: boolean
+  breadcrumb: string
+  expandVer: number
+  collapseVer: number
+  activeLeaf: string | null
+  onLeafClick: (node: DataNode, breadcrumb: string) => void
+}
+
+export function Accordion({
+  node, depth, accentColor, isTopLevel, breadcrumb,
+  expandVer, collapseVer, activeLeaf, onLeafClick,
+}: AccordionProps) {
+  const [open, setOpen] = useState(false)
+
+  useEffect(() => { if (expandVer > 0) setOpen(true) }, [expandVer])
+  useEffect(() => { if (collapseVer > 0) setOpen(false) }, [collapseVer])
+
+  const currentBreadcrumb = breadcrumb ? breadcrumb + ' › ' + node.name : node.name
+  const leafChildren = node.children?.filter(c => isLeaf(c)) ?? []
+  const branchChildren = node.children?.filter(c => !isLeaf(c)) ?? []
+  const badgeText = node.children ? String(node.children.length) : ''
+
+  return (
+    <div className={`accordion${open ? ' open' : ''}`}>
+      <button className="accordion-trigger" onClick={() => setOpen(o => !o)}>
+        {isTopLevel && <span className="dot" style={{ background: accentColor }} />}
+        <span className="accordion-chevron">▶</span>
+        <span className="accordion-title">{node.name}</span>
+        <span className="accordion-badge">{badgeText}</span>
+      </button>
+      <div className="accordion-body">
+        <div className="accordion-inner">
+          {leafChildren.length > 0 && (
+            <div className="leaf-grid">
+              {leafChildren.map(child => (
+                <LeafCard
+                  key={child.name}
+                  node={child}
+                  accentColor={accentColor}
+                  isActive={activeLeaf === child.name + '|' + currentBreadcrumb}
+                  onClick={() => onLeafClick(child, currentBreadcrumb)}
+                />
+              ))}
+            </div>
+          )}
+          {branchChildren.length > 0 && (
+            <div className="accordion-group">
+              {branchChildren.map(child => (
+                <Accordion
+                  key={child.name}
+                  node={child}
+                  depth={depth + 1}
+                  accentColor={accentColor}
+                  isTopLevel={false}
+                  breadcrumb={currentBreadcrumb}
+                  expandVer={expandVer}
+                  collapseVer={collapseVer}
+                  activeLeaf={activeLeaf}
+                  onLeafClick={onLeafClick}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
