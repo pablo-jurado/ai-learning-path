@@ -125,7 +125,7 @@ const DATA = [
         ]
       },
       {
-        "name": "AI Skills",
+        "name": "Generative AI",
         "icon": "",
         "color": "#16A34A",
         "colorLight": "#ECFDF5",
@@ -187,19 +187,18 @@ const DATA = [
             "name": "Creating RAG Pipelines - TODO",
             "children": [{}]
           },
-          {
-            "name": "Frameworks",
+        ]
+      },
+      {
+        "name": "Agent Orchestration",
+        "icon": "",
+        "color": "#cf3e3e",
+        "colorLight": "#fdf2f2",
+        "colorBorder": "#fbcfcf",
+        "children": [
+           {
+            "name": "Frameworks & Libraries",
             "children": [
-              {
-                "name": "Amazon Agent Core",
-                "description": "Amazon Bedrock AgentCore is an agentic platform for building, deploying, and operating highly effective agents securely at scale using any framework and foundation model",
-                "tags": ["Framework", "AWS", "Agentic AI"],
-                "sources": [
-                  { "label": "Agent Core Docs", "url": "https://docs.aws.amazon.com/bedrock-agentcore/"},
-                  { "label": "Agent Core - Getting Started Toolkit", "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-get-started-toolkit.html" },
-
-                ]
-              },
               {
                 "name": "Semantic Kernel",
                 "description": "Microsoft's open-source SDK for integrating LLMs into applications. Supports C#, Python, and Java with a plugin architecture, planners, and memory connectors for enterprise AI development.",
@@ -255,6 +254,35 @@ const DATA = [
               },
             ]
           },
+          {
+            "name": "Enterprise Orchestration",
+            "children": [
+              {
+                "name": "Amazon Agent Core",
+                "description": "Amazon Bedrock AgentCore is an agentic platform for building, deploying, and operating highly effective agents securely at scale using any framework and foundation model",
+                "tags": ["Framework", "AWS", "Agentic AI"],
+                "sources": [
+                  { "label": "Agent Core Docs", "url": "https://docs.aws.amazon.com/bedrock-agentcore/"},
+                  { "label": "Agent Core - Getting Started Toolkit", "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-get-started-toolkit.html" },
+                  { "label": "Agent Core - Samples", "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/?tab=readme-ov-file"},
+                  { "label": 'Tutorial: Deploy any AI agent with AgentCore', "url": 'https://www.youtube.com/watch?v=N7FGbBq1mI4' },
+                  { "label": "Agent Core Deep Dive", "url": "https://www.youtube.com/watch?v=Op6L62rS5WU&list=PLrDJzKfz9AUuq0Rt-I0HyWgCNOYME1f6Y" }
+                ]
+              },
+              {
+                "name": "Azure Foundry Agent Service",
+                "description": "Agent Service provides a production-ready foundation for deploying intelligent agents in enterprise environments",
+                "tags": ["Framework", "Azure", "Agentic AI"],
+                "sources": [
+                  { "label": "Agent Service Docs", "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/agents/overview?view=foundry&preserve-view=true" },
+                  { "label": "FAQ", "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/agents/faq?view=foundry"},
+                  { "label": "Deploy your first agent", "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/agents/quickstarts/quickstart-hosted-agent?view=foundry" },
+                  { "label": "Observability and monitoring", "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/agents/how-to/metrics?view=foundry"},
+                  { "label": "Develop AI Agents on Azure", "url": "https://www.youtube.com/watch?v=EoghOd0hU6E&list=PLahhVEj9XNTd9_qEnUZSUfxWSSpRwqXjk&index=1"}
+                ]
+              }
+            ]
+          }
         ]
       },
       {
@@ -279,10 +307,6 @@ const DATA = [
                   {
                     "label": 'AWS AI Practitioner Learning Plan',
                     "url": 'https://skillbuilder.aws/learning-plan/G8ENMJ5QBE/aws-artificial-intelligence-practitioner-learning-plan/SU2A1EJM1A',
-                  },
-                  {
-                    "label": 'Tutorial: Deploy any AI agent with AgentCore',
-                    "url": 'https://www.youtube.com/watch?v=N7FGbBq1mI4',
                   },
                   {
                     "label": 'Tutorial: Bedrock Running in Lambda',
