@@ -140,7 +140,8 @@ const DATA = [
                 "tags": ["Cloud", "Microsoft", "Enterprise"],
                 "sources": [
                   { "label": "Azure AI Foundry", "url": "https://azure.microsoft.com/en-us/products/ai-services" },
-                  { "label": "Azure AI Docs", "url": "https://learn.microsoft.com/en-us/azure/ai-studio/" }
+                  { "label": "Azure AI Docs", "url": "https://learn.microsoft.com/en-us/azure/ai-studio/" },
+                  { "label": "Deploy Models in Azure Foundry", "url": "https://www.youtube.com/watch?v=ewHPdDtmHj4&list=PLyqwquIuSMZpGDiocmT-M67dcDxjWmoYK&index=21" },
                 ]
               },
               {
@@ -155,9 +156,26 @@ const DATA = [
             ]
           },
           {
-            "name": "Generative AI via API - TODO",
+            "name": "Build an AI chat app",
             "children": [
-              {}
+              {
+                "name": "Building an AI Chat App with AWS Bedrock",
+                "description": "Learn how to build a simple AI chat application using Amazon Bedrock.",
+                "tags": ["Tutorial", "AWS Bedrock", "Chat App"],
+                "sources": [
+                  { "label": "Tutorial: Build an AI Chat App with Amazon Bedrock", "url": "https://www.youtube.com/watch?v=E1-mUfpeRu0" },
+                  { "label": "Repository", "url": "https://github.com/trevorspires/Bedrock-Chatbot-Youtube/blob/main/main.py"}
+                ]
+              },
+              {
+                "name": "Building an AI Chat App with Azure Foundry",
+                "description": "Learn how to build a simple AI chat application using Azure Foundry.",
+                "tags": ["Tutorial", "Azure Foundry", "Chat App"],
+                "sources": [
+                  { "label": "Simple Chat App", "url": "https://www.youtube.com/watch?v=lPsMx8yaO_I&list=PLyqwquIuSMZpGDiocmT-M67dcDxjWmoYK&index=19" },
+                  { "label": "Simple Chat App - Settings, History and Streaming", "url": "https://www.youtube.com/watch?v=RKY8DWGOWTI&list=PLyqwquIuSMZpGDiocmT-M67dcDxjWmoYK&index=18" },
+                ]
+              },
             ]
           },
           {
@@ -193,6 +211,14 @@ const DATA = [
                     "label": "Semantic Kernel Fundamentals - MCP StreamableHttp",
                     "url": "https://www.youtube.com/watch?v=1tTUOU9Gnd8&list=PLyqwquIuSMZpGDiocmT-M67dcDxjWmoYK&index=1"
                   }
+                ]
+              },
+              {
+                "name": "MCP Implementation with AWS Bedrock",
+                "description": "Learn how to implement MCP with AWS Bedrock.",
+                "sources": [
+                  { "label": "MCP with AWS Bedrock - part 1", "url": "https://www.youtube.com/watch?v=6OgFTW6bfSk" },
+                  { "label": "How to build an MCP Server - part 2", "url": "https://www.youtube.com/watch?v=RO6gBtPi25w"}
                 ]
               }
             ]
