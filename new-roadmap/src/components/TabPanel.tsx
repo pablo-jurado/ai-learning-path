@@ -12,15 +12,13 @@ interface TabPanelProps {
 }
 
 export function TabPanel({ tab, colors, isActive, activeLeaf, onLeafClick }: TabPanelProps) {
-  const [expandVer, setExpandVer] = useState(0)
-  const [collapseVer, setCollapseVer] = useState(0)
+  const [expandAll, setExpandAll] = useState(false)
 
   return (
     <div className={`tab-content${isActive ? ' active' : ''}`}>
       {tab.goal && <div className="module-goal">{tab.goal}</div>}
       <div className="toolbar">
-        <button className="toolbar-btn" onClick={() => setExpandVer(v => v + 1)}>Expand all</button>
-        <button className="toolbar-btn" onClick={() => setCollapseVer(v => v + 1)}>Collapse all</button>
+        <button className="toolbar-btn" onClick={() => setExpandAll(!expandAll)}>{expandAll ? 'Collapse all' : 'Expand all'}</button>
       </div>
       <div className="accordion-group">
         {tab.children?.filter(s => !isLeaf(s)).map(section => (
@@ -31,8 +29,7 @@ export function TabPanel({ tab, colors, isActive, activeLeaf, onLeafClick }: Tab
             accentColor={colors.color}
             isTopLevel={true}
             breadcrumb={tab.name}
-            expandVer={expandVer}
-            collapseVer={collapseVer}
+            expandAll={expandAll}
             activeLeaf={activeLeaf}
             onLeafClick={onLeafClick}
           />

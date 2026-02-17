@@ -9,20 +9,18 @@ interface AccordionProps {
   accentColor: string
   isTopLevel: boolean
   breadcrumb: string
-  expandVer: number
-  collapseVer: number
+  expandAll: boolean
   activeLeaf: string | null
   onLeafClick: (node: DataNode, breadcrumb: string) => void
 }
 
 export function Accordion({
   node, depth, accentColor, isTopLevel, breadcrumb,
-  expandVer, collapseVer, activeLeaf, onLeafClick,
+  expandAll, activeLeaf, onLeafClick,
 }: AccordionProps) {
   const [open, setOpen] = useState(false)
 
-  useEffect(() => { if (expandVer > 0) setOpen(true) }, [expandVer])
-  useEffect(() => { if (collapseVer > 0) setOpen(false) }, [collapseVer])
+  useEffect(() => { setOpen(expandAll) }, [expandAll])
 
   const currentBreadcrumb = breadcrumb ? breadcrumb + ' › ' + node.name : node.name
   const leafChildren = node.children?.filter(c => isLeaf(c)) ?? []
@@ -62,8 +60,7 @@ export function Accordion({
                   accentColor={accentColor}
                   isTopLevel={false}
                   breadcrumb={currentBreadcrumb}
-                  expandVer={expandVer}
-                  collapseVer={collapseVer}
+                  expandAll={expandAll}
                   activeLeaf={activeLeaf}
                   onLeafClick={onLeafClick}
                 />
