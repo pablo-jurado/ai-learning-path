@@ -9,9 +9,25 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="site-nav.css">
 </head>
 
-<body>
+<body class="has-site-nav">
+    <div class="site-nav-overlay" id="siteNavOverlay" aria-hidden="true"></div>
+    <nav class="site-nav" id="siteNav" aria-label="Site map">
+        <button type="button" class="site-nav-toggle" id="siteNavToggle" aria-expanded="false" aria-controls="siteNavList">
+            <span class="site-nav-toggle-icon" aria-hidden="true">☰</span>
+            <span class="site-nav-toggle-text">Site map</span>
+        </button>
+        <div class="site-nav-label">Navigate</div>
+        <div class="site-nav-list" id="siteNavList">
+            <a href="index.html" class="active"><span class="nav-icon">⌂</span><span class="nav-label">Home</span></a>
+            <a href="skills/index.html"><span class="nav-icon">▸</span><span class="nav-label">Complete Roadmap</span></a>
+            <a href="cloud/index.html"><span class="nav-icon">▸</span><span class="nav-label">Cloud Certifications</span></a>
+            <a href="tree/index.html"><span class="nav-icon">▸</span><span class="nav-label">High-Level Overview</span></a>
+            <a href="survey/index.html"><span class="nav-icon">▸</span><span class="nav-label">DEMLAI Skills Survey</span></a>
+        </div>
+    </nav>
     <div class="container">
         <div class="header">
             <div class="header-label">Interactive Roadmap</div>
@@ -28,7 +44,37 @@
             <a class="tab" href="./tree/index.html">
                 High-Level Overview
             </a>
+            <a class="tab" href="./survey/index.html">
+                DEMLAI Skills Survey
+            </a>
         </div>
     </div>
+    <script>
+        (function() {
+            var nav = document.getElementById('siteNav');
+            var toggle = document.getElementById('siteNavToggle');
+            var overlay = document.getElementById('siteNavOverlay');
+            function closeMobile() {
+                nav.classList.remove('open');
+                if (overlay) overlay.classList.remove('visible');
+                toggle && toggle.setAttribute('aria-expanded', 'false');
+            }
+            function openMobile() {
+                nav.classList.add('open');
+                if (overlay) overlay.classList.add('visible');
+                toggle && toggle.setAttribute('aria-expanded', 'true');
+            }
+            toggle && toggle.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    if (nav.classList.contains('open')) closeMobile(); else openMobile();
+                } else {
+                    nav.classList.toggle('collapsed');
+                    document.body.classList.toggle('nav-collapsed', nav.classList.contains('collapsed'));
+                }
+            });
+            overlay && overlay.addEventListener('click', closeMobile);
+            if (window.innerWidth <= 768) document.body.classList.remove('nav-collapsed');
+        })();
+    </script>
 </body>
 </html>

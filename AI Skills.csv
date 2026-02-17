@@ -1,0 +1,223 @@
+Contents,,,
+Prompt Engineering,,,
+Foundational Models & Adaptation,,,
+RAG (Retrieval-Augmented Generation),,,
+Stateful AI and Memory,,,
+AI System Integration,,,
+Model Deployment and Infrastructure,,,
+"Evaluation, Safety, and Monitoring",,,
+"AI Ethics, Governance, and Risk",,,
+Use Case Identification,,,
+Project Management,,,
+CHANNEL: Artificial Intelligence,,,
+Subdomain,Skill,Level,Description
+Context Engineering,Prompt Design and Clarity,Beginner,"Understands what a prompt is and can use basic, direct questions (e.g., ""Summarize this paragraph"")"
+,,Novice,"Can write functional prompts with some tuning (e.g., changing tone or format), usually through trial and error"
+,,Competent,"Crafts clear, targeted prompts with intent (e.g., persona-based prompts, format constraints) and predicts model behavior"
+,,Proficient,"Designs nuanced prompts tailored to task complexity, refines for performance, and reduces hallucinations"
+,,Expert,"Innovates new prompting strategies, teaches best practices, and actively contributes to evolving prompt methodologies"
+,Prompting Strategies and Patterns,Beginner,"Aware that prompts can be written in different ways (e.g., with or without examples); may use zero-shot without knowing the term"
+,,Novice,"Understands and can explain zero-shot, one-shot, and few-shot prompting; begins experimenting with examples or role-based setups"
+,,Competent,"Chooses prompting strategies based on task (e.g., uses few-shot for classification, chain-of-thought for reasoning); evaluates performance impact"
+,,Proficient,"Refines and optimizes prompting techniques (e.g., tunes few-shot examples, uses role prompting or system messages for behavior control)"
+,,Expert,"Invents or systematizes advanced techniques (e.g., self-consistency, scratchpad reasoning); mentors others and contributes to prompt strategy design"
+,Using Prompt Templates and Variables,Beginner,Can fill in simple templates with static inputs when shown a working example
+,,Novice,"Understands the use of input/output variables and can use basic templating tools (e.g., f-strings, Jinja)"
+,,Competent,"Creates reusable prompt templates for common tasks, dynamically fills in variables from app code or workflows"
+,,Proficient,"Optimizes prompt templates for performance, integrates them into tooling (e.g., LangChain/Flowise), and manages template versions"
+,,Expert,"Designs scalable prompt templating frameworks, mentors others on maintainability, and drives prompt system architecture"
+,Token and Context Management,Beginner,"Aware that models have context limits (e.g., “4,000 tokens”); may not fully understand implications"
+,,Novice,"Can count tokens using tooling (e.g., tiktoken, tokenizer APIs); trims inputs manually when needed"
+,,Competent,"Designs prompts and applications to stay within context window; understands tradeoffs between input length, quality, and cost"
+,,Proficient,"Implements dynamic context management (e.g., truncation strategies, selective summarization, memory buffers)"
+,,Expert,"Innovates on context compression, hierarchical memory, or long-context strategies; advises or contributes to scalable LLM deployment patterns"
+,Prompt Chaining for Multi-Step Reasoning,Beginner,"Aware that large tasks can be broken down, but may not know how to design or execute chained prompts"
+,,Novice,"Can use a predefined multi-prompt flow to perform step-by-step tasks (e.g., retrieve > summarize > reformat)"
+,,Competent,Designs simple prompt chains to guide reasoning or improve reliability in multi-step tasks
+,,Proficient,"Builds robust chained workflows using frameworks (e.g., LangChain agents), and handles errors and edge cases"
+,,Expert,"Invents novel reasoning patterns, teaches chaining strategies, and contributes to best practices for LLM workflow design"
+Foundational Models & Adaptation,Understanding Transformer Architectures,Beginner,Has heard of transformers and knows they’re used in LLMs; may recognize “attention is all you need”
+,,Novice,"Can explain basic components (e.g., attention, embeddings, positional encoding) with some inaccuracies"
+,,Competent,Understands transformer internals well enough to select or compare models based on architecture
+,,Proficient,"Analyzes model behavior or performance in context of architectural trade-offs (e.g., decoder-only vs encoder-decoder)"
+,,Expert,"Can teach or innovate on architecture; contributes to research, benchmarking, or new model designs"
+,"Using Open and Closed Source Models (e.g., GPT-4, LLaMA)",Beginner,Can run basic queries through OpenAI or Hugging Face interfaces
+,,Novice,"Knows the difference between hosted APIs and local models; can switch between GPT, Claude, LLaMA, etc"
+,,Competent,"Selects and configures appropriate models (API vs local), understands performance/cost tradeoffs"
+,,Proficient,"Benchmarks model performance, deploys models across different environments, understands licensing implications"
+,,Expert,"Evaluates, modifies, or fine-tunes models at scale; helps organizations build hybrid or fallback strategies"
+,"Fine-Tuning Models (full, LoRA, PEFT)",Beginner,Aware that models can be trained further; has heard terms like “fine-tuning” or “domain adaptation.”
+,,Novice,Can follow tutorials to perform basic fine-tuning tasks using libraries like Hugging Face or PEFT
+,,Competent,"Chooses the right fine-tuning method (full vs LoRA vs prompt tuning), and runs training workflows effectively"
+,,Proficient,"Optimizes fine-tuning pipelines (e.g., hyperparams, evaluation), manages training data pipelines"
+,,Expert,"Develops novel fine-tuning techniques, integrates them at scale, and contributes to open-source or research"
+,Using Adapters and Model Quantization,Beginner,"Has heard of adapters or quantization, but may not know when or why to use them"
+,,Novice,Can follow instructions to apply adapters or quantize models using off-the-shelf tooling
+,,Competent,Applies quantization or adapter strategies appropriately to optimize model deployment and cost
+,,Proficient,"Benchmarks performance vs quality trade-offs; understands implications of precision levels (e.g., int8, fp16)"
+,,Expert,Designs deployment strategies with custom adapters/quantization; contributes to tooling or optimization frameworks
+RAG (Retrieval-Augmented Generation),Text Chunking Strategies,Beginner,"Aware that long texts must be broken into parts; uses basic naive splits (e.g., every 500 words)"
+,,Novice,"Can apply simple chunking techniques (e.g., overlapping windows, paragraph-based) via prebuilt tools"
+,,Competent,"Selects chunking strategy based on context length, semantic boundaries, and task type (e.g., summarization vs Q&A)"
+,,Proficient,"Designs and evaluates custom chunking logic using metadata, headings, or content density; considers chunk cohesion"
+,,Expert,Innovates new chunking methods to improve downstream RAG performance; shares tools or research with the community
+,Embedding Generation and Similarity Search,Beginner,"Can generate embeddings using provided APIs (e.g., OpenAI, Hugging Face) for a few documents"
+,,Novice,Understands the concept of semantic similarity and vector space; can implement basic search
+,,Competent,"Selects embedding models, tunes similarity thresholds, and handles common edge cases (e.g., null vectors)"
+,,Proficient,Benchmarks different embedding models for task fit; implements reranking or hybrid search techniques
+,,Expert,"Designs embedding strategies (e.g., task-specific training), evaluates at scale, and contributes to model or index improvement"
+,"Vector Database Use (e.g., FAISS, Pinecone, Weaviate)",Beginner,"Can store and retrieve embeddings using a simple API (e.g., Pinecone quickstart, ChromaDB)"
+,,Novice,"Sets up a basic vector database, loads data, and performs similarity searches with guidance"
+,,Competent,"Selects appropriate vector DB for the task; implements filtering, metadata queries, and hybrid search"
+,,Proficient,"Tunes index parameters (e.g., ANN algorithms), manages data lifecycle, and scales databases in production"
+,,Expert,Designs distributed or multi-modal vector stores; contributes to indexing strategy or underlying vector DB performance
+,"Designing Effective RAG Pipelines (Fusion/Fan-Out, Ranking, Fallback)",Beginner,"Understands that RAG connects retrieval with generation, but may struggle with implementation"
+,,Novice,"Can build basic RAG pipeline using templates or tools (e.g., LangChain retrieval chain)"
+,,Competent,"Designs RAG workflows with appropriate retrieval logic (e.g., top-k, rerankers) and integrates into apps"
+,,Proficient,"Builds robust pipelines using fusion, fan-out, fallback, or multi-hop retrieval; evaluates latency vs quality"
+,,Expert,Innovates new retrieval-generation workflows; contributes to open-source or publishes case studies/research on RAG
+Stateful AI and Memory,Desiging and Using Memory Systems,Beginner,Understands that memory enables AI to retain information across interactions; recognizes stateless vs stateful behavior
+,,Novice,"Uses basic memory modules in frameworks like LangChain or Semantic Kernel; distinguishes short-term (buffer, sliding window) and long-term memory (vector-based retrieval)"
+,,Competent,"Designs and applies memory in projects; selects appropriate strategies and tools (e.g., Redis, vector stores)"
+,,Proficient,"Customizes memory architecture for specific use cases (e.g., summarization for long sessions, episodic memory for agents); balances cost, context, performance and builds reusable patterns"
+,,Expert,"Leads design of scalable memory systems; develops new patterns, mentors others, and aligns memory with governance standards"
+,Implementing Conversational Memory,Beginner,Recognizes that conversations need context to feel natural; aware that models “forget” without memory and can’t continue coherent dialogue on their own
+,,Novice,"Uses framework-provided tools (e.g., session buffers, turn logs) to maintain conversation history; enables basic continuity and recall within a single session"
+,,Competent,"Implements memory that persists across turns and sessions; uses summarization, tagging, or segmentation to retain relevant context and user details"
+,,Proficient,"Designs conversational flows that adapt based on memory (e.g., user preferences, prior topics); manages memory lifecycle to balance personalization with accuracy and cost"
+,,Expert,"Architects dynamic, context-aware memory systems for complex chat experiences; aligns memory strategy with UX goals, privacy controls, and long-term user engagement. Mentors others on creating human-like continuity in AI interactions"
+,Ethical Use and Governance of AI Memory,Beginner,Understands that storing memory raises ethical and privacy concerns; aware of basic data sensitivity
+,,Novice,"Applies basic guardrails (e.g., not storing PII); recognizes when consent, transparency, or deletion may be needed"
+,,Competent,"Designs memory features with user consent, data minimization, and retention policies in mind"
+,,Proficient,"Implements governance controls (e.g., audit logs, opt-out mechanisms); ensures alignment with internal and external compliance standards"
+,,Expert,"Leads ethical design of memory systems; defines policy, aligns architecture with regulatory frameworks (e.g., GDPR), and educates others on responsible practices"
+AI System Integration,"Calling models via API (e.g., OpenAI, Azure, Hugging Face)",Beginner,"Can call an AI model using simple REST or SDK examples (e.g., OpenAI Playground or curl snippet)"
+,,Novice,Can call APIs programmatically from apps using authentication and basic parameterization
+,,Competent,"Manages API versioning, rate limits, and retries; uses environment variables for secure deployment"
+,,Proficient,Abstracts and wraps model APIs into reusable components; handles multi-provider support and logging
+,,Expert,"Designs robust multi-model infrastructure; contributes to SDKs, best practices, or enterprise AI platform integration"
+,"Chaining model calls with tools/workflows (e.g., LangChain, Semantic Kernel)",Beginner,Follows tutorials to chain two or more steps in a basic agent or workflow
+,,Novice,Understands agent architectures; chains tools or prompts using existing components in frameworks
+,,Competent,"Designs full pipelines for task execution, including memory, planning, and tool invocation"
+,,Proficient,"Builds modular, reusable agents or chains that can handle conditional logic, tool errors, and state"
+,,Expert,"Invents new chaining patterns, extends frameworks with custom logic, and helps define best practices for tool orchestration"
+,"Integrating model outputs into applications (frontend, backend)",Beginner,"Can display raw model output in a basic interface (e.g., textbox ? response box)"
+,,Novice,"Uses model responses in form fields, dashboards, or chat UIs with some formatting or logic"
+,,Competent,"Designs APIs or service layers to process model responses, handle edge cases, and enable testing"
+,,Proficient,"Integrates model feedback loops, streaming outputs, or real-time updates into app UX patterns"
+,,Expert,Leads AI-driven product architecture; ensures LLM behavior aligns with business logic and user experience
+Model Deployment and Infrastructure,"Hosting models (local, cloud, edge)",Beginner,"Can run a small model locally using example scripts (e.g., Hugging Face transformers or text-generation-webui)"
+,,Novice,"Deploys basic models to cloud services (e.g., Hugging Face Spaces, Azure ML) using default settings"
+,,Competent,"Configures model serving environments, manages hardware requirements (e.g., GPU/CPU), and selects deployment targets"
+,,Proficient,"Deploys and scales models in containerized/cloud-native environments (e.g., Docker, Kubernetes, Azure AKS)"
+,,Expert,"Designs hybrid/local/cloud deployment strategies, optimizes resource allocation, and supports edge inference pipelines"
+,Using inference endpoints and serverless functions,Beginner,"Understands the concept of an inference endpoint and can query it via HTTP tools (e.g., Postman)"
+,,Novice,"Deploys serverless inference using low-code platforms (e.g., Azure Functions, AWS Lambda with Hugging Face endpoints)"
+,,Competent,"Wraps models as REST endpoints with validation, authentication, and async processing logic"
+,,Proficient,"Orchestrates inference across serverless environments with autoscaling, observability, and traffic management"
+,,Expert,"Designs cost-optimized, multi-region serverless inference architecture and integrates with enterprise systems"
+,"Caching, rate limiting, and scaling",Beginner,Aware that model queries can be slow or expensive; may recognize API limits
+,,Novice,"Uses basic caching strategies (e.g., memoization, API gateway caching) and understands rate limits"
+,,Competent,"Implements caching layers (e.g., Redis), configures rate limits, and monitors throughput"
+,,Proficient,"Designs horizontal/vertical scaling strategies, optimizes for latency and concurrency."
+,,Expert,"Builds globally distributed, auto-scaling AI services with fine-tuned traffic control, caching policies, and fallback logic."
+,Using MLOps pipelines (CI/CD for models),Beginner,Has heard of MLOps; understands it’s similar to DevOps for models
+,,Novice,Uses simple pipelines to retrain or redeploy models via notebooks or tools like MLflow or Azure ML Designer
+,,Competent,"Sets up automated CI/CD workflows for models using GitHub Actions, MLflow, or Azure DevOps"
+,,Proficient,"Integrates model training, evaluation, deployment, and rollback into a cohesive pipeline with monitoring"
+,,Expert,"Designs robust MLOps architecture for enterprise scale, incorporating audit trails, lineage tracking, and compliance requirements"
+"Evaluation, Safety, and Monitoring",Designing human & automated evaluation methods,Beginner,Understands that AI outputs need to be evaluated; can give basic subjective feedback
+,,Novice,"Uses predefined metrics (e.g., BLEU, ROUGE, accuracy) and performs basic A/B comparisons"
+,,Competent,"Designs task-specific evaluation frameworks combining human review and metrics (e.g., faithfulness, relevance)"
+,,Proficient,"Implements human-in-the-loop pipelines, feedback collection, and aggregated scoring dashboards"
+,,Expert,"Innovates new evaluation methodologies for complex LLM use cases (e.g., helpfulness, bias, trustworthiness); contributes to standardization"
+,Hallucination detection and mitigation,Beginner,Aware that models can “make things up” but unsure how to detect or fix it
+,,Novice,Can identify obvious hallucinations and uses simple prompts or grounding to reduce them
+,,Competent,"Uses retrieval grounding, prompt structure, or model choice to reduce hallucination risk"
+,,Proficient,"Evaluates hallucination rates systematically, designs verification workflows or filters"
+,,Expert,"Develops mitigation techniques (e.g., response calibration, post-generation validation); shares findings or publishes benchmarks"
+,Use of guardrails and moderation APIs,Beginner,Knows that AI outputs may need filtering; may use UI-based moderation settings
+,,Novice,"Applies prebuilt guardrails or content filters (e.g., OpenAI moderation API, Azure Content Safety)"
+,,Competent,"Implements structured safety checks using multiple layers (pre-/post-filtering, rule-based)"
+,,Proficient,Builds custom guardrails aligned to business or user-specific safety thresholds
+,,Expert,"Develops reusable moderation pipelines, influences policy frameworks, or contributes to safety tooling"
+,Logging and feedback collection,Beginner,Can manually track responses or see history in a basic tool interface
+,,Novice,Captures and reviews model inputs/outputs via application logs or lightweight tooling
+,,Competent,"Implements structured logging with metadata (e.g., user IDs, latency, token usage) for observability"
+,,Proficient,Builds feedback loops into applications; aggregates logs for analytics and error tracing
+,,Expert,"Designs systems for longitudinal performance tracking, user feedback analysis, and dynamic model improvements"
+"AI Ethics, Risk & Governance",Understanding responsible AI principles,Beginner,"Aware that AI can introduce risks or bias; has heard terms like fairness, transparency, and accountability"
+,,Novice,Can describe key responsible AI principles and cite examples of harm or unintended outcomes
+,,Competent,Applies RAI principles to guide design or decision-making in practical projects
+,,Proficient,"Leads ethical reviews, creates checklists or standards for RAI adoption within teams"
+,,Expert,Shapes organizational policy or frameworks for responsible AI; contributes to thought leadership or academic discussion
+,Data privacy and model misuse risks,Beginner,Knows that sensitive data should not be shared with AI tools; aware of basic privacy concerns
+,,Novice,"Understands PII, data retention, and consent principles; avoids using private data in prompts"
+,,Competent,"Implements privacy-aware workflows (e.g., anonymization, encryption, audit logs)"
+,,Proficient,"Anticipates potential misuse scenarios and develops countermeasures (e.g., prompt injection protection)"
+,,Expert,Guides governance decisions on data use and misuse risks at scale; contributes to regulatory guidance or standards
+,"Regulatory awareness (e.g., EU AI Act, NIST RMF)",Beginner,Aware that regulations exist but not familiar with names or implications
+,,Novice,"Recognizes key frameworks and can describe basic obligations (e.g., risk tiers in EU AI Act)"
+,,Competent,Ensures AI systems comply with relevant laws and standards; participates in compliance reviews
+,,Proficient,Maps technical decisions to regulatory categories and designs compliant system architectures
+,,Expert,Advises on or helps shape policy and regulation at the organizational or industry level
+,"Documentation practices (model cards, data sheets, auditability)",Beginner,Understands that documentation is important but may not know what model cards are
+,,Novice,"Can read and use model documentation (e.g., model cards, data statements) to make basic decisions"
+,,Competent,"Produces model documentation, tracks data lineage, and maintains reproducibility in AI workflows"
+,,Proficient,Builds documentation processes into development pipelines; aligns artifacts with compliance needs
+,,Expert,Defines standards for documentation quality and consistency; advocates for transparency and traceability at scale
+Use Case Identification,Framing business problems for AI,Beginner,Understands that AI is more useful when applied to business problems (not just tasks) and can identify general problem categories
+,,Novice,Helps clients reframe tasks or ideas as outcomes-driven problems and can distinguish between well-posed vs ambiguous use cases
+,,Competent,Translates client pain points into AI-suitable problem statements and avoids jumping to solutions too early
+,,Proficient,Guides clients through structured problem-framing sessions and ensures alignment with organizational goals
+,,Expert,Teaches and scales problem-framing best practices across teams and contributes to shaping how clients define their AI roadmap
+,Assessing AI fit and solution type,Beginner,"Understands that not all problems are AI problems and can identify broad AI categories (e.g., classification, generation)"
+,,Novice,"Uses simple criteria to assess fit (e.g., need for pattern recognition, ambiguous rules, data availability)"
+,,Competent,"Applies structured fit assessment methods and maps problems to appropriate AI solutions (e.g., summarization, RAG, NLP)"
+,,Proficient,"Advises on trade-offs of different AI solutions given constraints, and matches fit to client maturity and risk tolerance"
+,,Expert,Shapes methodology for assessing fit across engagements and is recognized for judgment on when to recommend or avoid AI
+,Scoping technical feasability,Beginner,Understands that data and infrastructure affect AI outcomes and is aware of basic prerequisites
+,,Novice,"Can ask questions about data readiness, model access, and governance to gauge viability"
+,,Competent,"Assesses feasibility using client inputs on data quality, APIs, and compute; flags blockers early"
+,,Proficient,Works with technical teams to refine scope based on system constraints and delivery realities
+,,Expert,Leads technical due diligence and scopes realistic pathways forward even in low-maturity environments
+,Estimating value and prioritizing opportunities,Beginner,Understands that not all AI projects are equally valuable. Aware of basic business impact categories
+,,Novice,"Uses templates to estimate potential gains (e.g., cost savings, efficiency) and classify value levels"
+,,Competent,Prioritizes use cases based on effort vs value; considers adoption complexity and outcome alignment
+,,Proficient,"Builds lightweight business cases and recommends sequencing based on ROI, impact, and feasibility"
+,,Expert,Shapes client roadmaps based on strategic value. Aligns opportunity assessment with executive priorities
+,Avoiding overengineering,Beginner,"Aware that AI isn't always the right answer, and recognizes when simpler solutions might work."
+,,Novice,"Flags potential overuse of AI (e.g., chatbots for static FAQs); can suggest simpler alternatives"
+,,Competent,Regularly challenges solution choices with 'what problem are we solving' and 'is AI necessary' lenses
+,,Proficient,"Guides teams away from unnecessary complexity; reframes efforts toward lean, impact-driven solutions"
+,,Expert,"Influences client culture to be skeptical of AI hype; advocates for responsible, grounded solutioning"
+,Aliging use cases with client goals and readiness,Beginner,"Understands that client culture, goals, and maturity impact success, and is aware of basic readiness factors"
+,,Novice,Identifies misalignments between use cases and client expectations or capabilities
+,,Competent,"Proactively adjusts recommendations based on readiness, change appetite, and stakeholder dynamics"
+,,Proficient,Facilitates alignment across client roles and stages use cases based on near- and long-term value
+,,Expert,"Shapes strategy based on deep client understanding; ensures buy-in, sustainability, and outcome alignment"
+Project Management,Managing uncertainty and iteration,Beginner,"AI outcomes are often non-deterministic and require experimentation, which makes scope fluid"
+,,Novice,"Success depends on data quality and availability, not just building code — requires data profiling and stakeholder coordination"
+,,Competent,"AI projects must include success metrics, human feedback paths, and model evaluation workflows"
+,,Proficient,"Teams must manage trade-offs between exploration (e.g., prompt tuning, model comparison) and shippable product features"
+,,Expert,"AI work spans data science, engineering, product, and sometimes compliance/legal — alignment is key"
+,Data-aware scoping and planning,Beginner,"Aware that data quality and availability impact AI outcomes, and recognizes that planning requires more than just feature specs"
+,,Novice,"Asks questions about data sources, volume, and accessibility; surfaces early risks tied to missing or low-quality data"
+,,Competent,Integrates data readiness into scope definitions and coordinates with data owners to assess feasibility before committing to timelines
+,,Proficient,"Anticipates downstream risks from poor or biased data, and builds in buffer time for discovery, profiling, cleaning, or augmentation tasks"
+,,Expert,Leads data scoping alongside solution architecture and establishes best practices for aligning delivery scope with real-world data constraints; mentors teams to treat data as a first-class deliverable
+,Designing feedback loops and evalutation plans,Beginner,"Understands that AI systems need to be evaluated beyond “it runs"" and recognizes that human feedback is often required"
+,,Novice,"Tracks basic evaluation metrics (e.g., accuracy, latency) and logs model behavior; is aware that outputs need validation."
+,,Competent,"Plans for human review or user feedback in early stages and etablishes evaluation criteria tied to the business goal (e.g., relevance, helpfulness)"
+,,Proficient,Designs feedback loops (manual or automated) into delivery plans and adjusts scope based on test outcomes or live usage signals
+,,Expert,"Leads model evaluation strategy across engagements and builds repeatable systems for feedback-driven improvement; coaches teams on metrics, bias detection, and post-deployment monitoring"
+,Balancing research and delivery,Beginner,Understands that AI projects involve exploratory work and notices when team activities shift between experimentation and delivery
+,,Novice,"Tracks exploratory work alongside deliverables, and helps capture what’s “good enough” to move forward while documenting open questions"
+,,Competent,Plans projects with space for iteration while driving toward deadlines and keeps clients aligned when priorities shift from R&D to shipping
+,,Proficient,"Manages scope creep from over-experimentation; helps teams define MVP boundaries, deliver iterative value, and timebox research efforts"
+,,Expert,"Leads projects where experimentation is an asset, not a risk; aligns R&D phases to business goals, mentors others in making pragmatic trade-offs, and ensures project momentum"
+,Orchestrating cross-disciplinary teams,Beginner,Understands that AI projects require cross-functional input. Aware that roles and expectations may differ from traditional dev teams
+,,Novice,Facilitates coordination between data and product teams. Tracks dependencies and flags when disconnects arise
+,,Competent,"Actively manages alignment across disciplines (e.g., data availability, model behavior, UX implications). Leads shared planning sessions and syncs"
+,,Proficient,"Anticipates misalignment across roles and surfaces it early; designs workflows that keep engineering, ML, and business needs in sync"
+,,Expert,"Creates high-functioning, cross-disciplinary AI teams, and builds repeatable practices for aligning priorities, pacing, and language across domains; mentors others on navigating AI collaboration friction points"

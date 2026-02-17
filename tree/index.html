@@ -1,9 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mermaid Tree</title>
+    <link rel="stylesheet" href="../site-nav.css">
 </head>
-<body>
+<body class="has-site-nav">
+    <div class="site-nav-overlay" id="siteNavOverlay" aria-hidden="true"></div>
+    <nav class="site-nav" id="siteNav" aria-label="Site map">
+        <button type="button" class="site-nav-toggle" id="siteNavToggle" aria-expanded="false" aria-controls="siteNavList">
+            <span class="site-nav-toggle-icon" aria-hidden="true">☰</span>
+            <span class="site-nav-toggle-text">Site map</span>
+        </button>
+        <div class="site-nav-label">Navigate</div>
+        <div class="site-nav-list" id="siteNavList">
+            <a href="../index.html"><span class="nav-icon">⌂</span><span class="nav-label">Home</span></a>
+            <a href="../skills/index.html"><span class="nav-icon">▸</span><span class="nav-label">Complete Roadmap</span></a>
+            <a href="../cloud/index.html"><span class="nav-icon">▸</span><span class="nav-label">Cloud Certifications</span></a>
+            <a href="index.html" class="active"><span class="nav-icon">▸</span><span class="nav-label">High-Level Overview</span></a>
+            <a href="../survey/index.html"><span class="nav-icon">▸</span><span class="nav-label">DEMLAI Skills Survey</span></a>
+        </div>
+    </nav>
     <div class="mermaid">
     graph LR
     AI_LEARNING_PATH_0["AI Learning Path"]
@@ -217,6 +235,32 @@
     <script type="module">
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
         mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+      (function() {
+        var nav = document.getElementById('siteNav');
+        var toggle = document.getElementById('siteNavToggle');
+        var overlay = document.getElementById('siteNavOverlay');
+        function closeMobile() {
+          nav.classList.remove('open');
+          if (overlay) overlay.classList.remove('visible');
+          if (toggle) toggle.setAttribute('aria-expanded', 'false');
+        }
+        function openMobile() {
+          nav.classList.add('open');
+          if (overlay) overlay.classList.add('visible');
+          if (toggle) toggle.setAttribute('aria-expanded', 'true');
+        }
+        if (toggle) toggle.addEventListener('click', function() {
+          if (window.innerWidth <= 768) {
+            if (nav.classList.contains('open')) closeMobile(); else openMobile();
+          } else {
+            nav.classList.toggle('collapsed');
+            document.body.classList.toggle('nav-collapsed', nav.classList.contains('collapsed'));
+          }
+        });
+        if (overlay) overlay.addEventListener('click', closeMobile);
+      })();
     </script>
 </body>
 </html>
