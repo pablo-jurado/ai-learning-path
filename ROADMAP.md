@@ -23,8 +23,10 @@
 ---
 
 ## 🔵 AI Foundation
+This module covers the basics of AI concepts, model optimization techniques, and advanced optimization strategies to prepare you for building effective AI applications.
 
 ### Basics of AI
+
 
 #### LLM
 
@@ -168,6 +170,7 @@ Techniques for coordinating multiple AI agents to work together on complex tasks
 ---
 
 ## 🟢 AI Building Blocks
+This module covers cloud platforms for AI development, building AI chat applications, using tools and plugins, creating agents, setting up MCP, and implementing RAG.
 
 ### Cloud Platforms
 
@@ -352,6 +355,7 @@ Learn how to implement RAG from scratch using the LangChain framework.
 ---
 
 ## 🔴 Agent Orchestration
+This module covers the leading agentic AI frameworks, as well as enterprise orchestration platforms from AWS and Azure.
 
 ### Frameworks & Libraries
 
@@ -455,6 +459,7 @@ Agent Service provides a production-ready foundation for deploying intelligent a
 ---
 
 ## 🟣 AI Certifications
+This module covers the key certifications offered by AWS and Microsoft Azure for AI practitioners and engineers, along with recommended learning paths and resources to prepare for these exams.
 
 ### AWS AI Certifications
 

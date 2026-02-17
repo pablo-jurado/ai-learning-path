@@ -5,10 +5,11 @@ const DATA = [
     "children": [
       {
         "name": "AI Foundation",
-        "icon": "",
+        "icon": "1",
         "color": "#2563EB",
         "colorLight": "#EFF6FF",
         "colorBorder": "#BFDBFE",
+        "goal": "This module covers the basics of AI concepts, model optimization techniques, and advanced optimization strategies to prepare you for building effective AI applications.",
         "children": [
           {
             "name": "Basics of AI",
@@ -136,10 +137,11 @@ const DATA = [
       },
       {
         "name": "AI Building Blocks",
-        "icon": "",
+        "icon": "2",
         "color": "#16A34A",
         "colorLight": "#ECFDF5",
         "colorBorder": "#A7F3D0",
+        "goal": "This module covers cloud platforms for AI development, building AI chat applications, using tools and plugins, creating agents, setting up MCP, and implementing RAG.",
         "children": [
           {
             "name": "Cloud Platforms",
@@ -322,10 +324,11 @@ const DATA = [
       },
       {
         "name": "Agent Orchestration",
-        "icon": "",
+        "icon": "3",
         "color": "#cf3e3e",
         "colorLight": "#fdf2f2",
         "colorBorder": "#fbcfcf",
+        "goal": "This module covers the leading agentic AI frameworks, as well as enterprise orchestration platforms from AWS and Azure.",
         "children": [
            {
             "name": "Frameworks & Libraries",
@@ -417,10 +420,11 @@ const DATA = [
       },
       {
         "name": "AI Certifications",
-        "icon": "",
+        "icon": "4",
         "color": "#a31687",
         "colorLight": "#FDF2FA",
         "colorBorder": "#FBCFE8",
+        "goal": "This module covers the key certifications offered by AWS and Microsoft Azure for AI practitioners and engineers, along with recommended learning paths and resources to prepare for these exams.",
         "children": [
           {
             "name": "AWS AI Certifications",
