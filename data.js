@@ -181,6 +181,28 @@ const DATA = [
             ]
           },
           {
+            "name": "Tools and Plugins",
+            "children": [
+              {
+                "name": "Semantic Kernel Plugins",
+                "description": "Learn how to build and use plugins in Semantic Kernel.",
+                "tags": ["Semantic Kernel", "Plugins"],
+                "sources": [
+                  { "label": "Semantic Kernel Plugins", "url": "https://www.youtube.com/watch?v=Xq1MeGssPWA&list=PLyqwquIuSMZpGDiocmT-M67dcDxjWmoYK&index=10" },
+                  { "label": "Semantic Kernel Multiple Plugins", "url": "https://www.youtube.com/watch?v=ety3aQ32b8U&list=PLyqwquIuSMZpGDiocmT-M67dcDxjWmoYK&index=9" },
+                ]
+              },
+              {
+                "name": "AWS Bedrock Tools",
+                "description": "Learn how to use tools in AWS Bedrock.",
+                "tags": ["AWS Bedrock", "Tools"],
+                "sources": [
+                  { "label": "Agents Tools & Function Calling with Amazon Bedrock (How-to)", "url": "https://www.youtube.com/watch?v=2L_XE6g3atI" },
+                ]
+              }
+            ]
+          },
+          {
             "name": "Creating Agents",
             "children": [
               { 
