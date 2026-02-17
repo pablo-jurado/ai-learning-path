@@ -18,14 +18,14 @@ const DATA = [
     "name": "AI Learning Path",
     "children": [
       {
-        "name": "Tools",
-        "icon": "⚙",
+        "name": "Platforms",
+        "icon": "",
         "color": "#2563EB",
         "colorLight": "#EFF6FF",
         "colorBorder": "#BFDBFE",
         "children": [
           {
-            "name": "Platforms",
+            "name": "AI Platforms",
             "children": [
               {
                 "name": "OpenAI",
@@ -293,63 +293,54 @@ const DATA = [
             ]
           },
           {
-            "name": "Frameworks",
+            "name": "Cloud Platforms",
             "children": [
               {
-                "name": "Semantic Kernel",
-                "description": "Microsoft's open-source SDK for integrating LLMs into applications. Supports C#, Python, and Java with a plugin architecture, planners, and memory connectors for enterprise AI development.",
-                "tags": ["Framework", "Microsoft", "C#", "Python"],
+                "name": "Azure AI Foundry",
+                "description": "Microsoft's unified platform for building AI applications on Azure. Provides access to OpenAI models, open-source models, evaluation tools, prompt flow, and enterprise-grade deployment.",
+                "tags": ["Cloud", "Microsoft", "Enterprise"],
                 "sources": [
-                  { "label": "Semantic Kernel Docs", "url": "https://learn.microsoft.com/en-us/semantic-kernel/" },
-                  { "label": "GitHub Repository", "url": "https://github.com/microsoft/semantic-kernel" },
-                  { "label": "Semantic Kernel Tutorial", "url": "https://www.youtube.com/watch?v=ewHPdDtmHj4&list=PLyqwquIuSMZpGDiocmT-M67dcDxjWmoYK&index=20" }
+                  { "label": "Azure AI Foundry", "url": "https://azure.microsoft.com/en-us/products/ai-services" },
+                  { "label": "Azure AI Docs", "url": "https://learn.microsoft.com/en-us/azure/ai-studio/" }
                 ]
               },
               {
-                "name": "AutoGen",
-                "description": "Microsoft's framework for building multi-agent conversational systems. Agents can collaborate, debate, and work together on complex tasks with human-in-the-loop capabilities.",
-                "tags": ["Framework", "Multi-Agent", "Microsoft"],
+                "name": "AWS Bedrock",
+                "description": "Amazon's fully managed service for building with foundation models. Access Anthropic Claude, Meta Llama, Mistral, and other models through a unified API with fine-tuning, guardrails, and knowledge bases.",
+                "tags": ["Cloud", "AWS", "Multi-model"],
                 "sources": [
-                  { "label": "AutoGen Docs", "url": "https://microsoft.github.io/autogen/" },
-                  { "label": "GitHub Repository", "url": "https://github.com/microsoft/autogen" },
-                  { "label": "AutoGen Tutorial", "url": "https://www.youtube.com/watch?v=ewHPdDtmHj4&list=PLyqwquIuSMZpGDiocmT-M67dcDxjWmoYK&index=20" }
+                  { "label": "AWS Bedrock", "url": "https://aws.amazon.com/bedrock/" },
+                  { "label": "Bedrock Documentation", "url": "https://docs.aws.amazon.com/bedrock/" }
                 ]
               },
               {
-                "name": "Microsoft Agent Framework",
-                "description": "Microsoft's broader agentic AI framework for building autonomous agents that can plan, reason, and take actions. Integrates with Azure AI services and enterprise tooling. Agent Framework combines AutoGen's simple agent abstractions with Semantic Kernel's enterprise features — session-based state management, type safety, middleware, telemetry — and adds graph-based workflows for explicit multi-agent orchestration.",
-                "tags": ["Framework", "Enterprise", "Azure"],
+                "name": "Google Cloud Vertex AI",
+                "description": "Google's enterprise ML platform offering Gemini models, model garden with 150+ models, fine-tuning, RAG engine, and end-to-end MLOps for building production AI systems.",
+                "tags": ["Cloud", "Google", "MLOps"],
                 "sources": [
-                  { "label": "Microsoft Agent Framework Docs", "url": "https://learn.microsoft.com/en-us/agent-framework/overview/?pivots=programming-language-csharp" },
-                  { "label": "GitHub Repository", "url": "https://github.com/microsoft/agent-framework" },
-                  { "label": "Microsoft Agent Framework tutorial", "url": "https://www.youtube.com/watch?v=EAeUiipzCTE"}
+                  { "label": "Vertex AI", "url": "https://cloud.google.com/vertex-ai" }
                 ]
               },
               {
-                "name": "AI-SDK (JavaScript/Vercel)",
-                "description": "Vercel's TypeScript toolkit for building AI applications with React. Provides hooks and streaming utilities for chat interfaces, generative UI, and tool calling with any LLM provider.",
-                "tags": ["Framework", "TypeScript", "React"],
+                "name": "Hugging Face",
+                "description": "The open-source AI community hub hosting 500K+ models, 200K+ datasets, and tools for training, fine-tuning, and deploying models. Features Transformers library, Spaces for demos, and Inference Endpoints.",
+                "tags": ["Community", "Open Source", "Hub"],
                 "sources": [
-                  { "label": "AI SDK Docs", "url": "https://ai-sdk.dev/getting-started" },
-                  { "label": "GitHub Repository", "url": "https://github.com/vercel/ai" },
-                  { "label": "AI SDK Cookbook", "url": "https://ai-sdk.dev/cookbook" },
-                  { "label": "AI SDK Guides", "url": "https://ai-sdk.dev/cookbook/guides" },
-                  { "label": "AI SDK Tutorial", "url": "https://www.youtube.com/watch?v=mojZpktAiYQ" }
+                  { "label": "Hugging Face", "url": "https://huggingface.co/" },
+                  { "label": "Transformers Docs", "url": "https://huggingface.co/docs/transformers" }
                 ]
-              },
-              {
-                "name": "LangChain",
-                "description": "The most popular framework for building applications powered by language models. Provides composable components for chains, agents, retrieval, memory, and tool use across Python and JavaScript.",
-                "tags": ["Framework", "Python", "JavaScript"],
-                "sources": [
-                  { "label": "LangChain Python Docs", "url": "https://python.langchain.com/" },
-                  { "label": "LangChain JS Docs", "url": "https://js.langchain.com/" },
-                  { "label": "LangChain Python Tutorial", "url": "https://www.youtube.com/watch?v=lG7Uxts9SXs" },
-                  { "label": "LangChain JS Tutorial", "url": "https://www.youtube.com/watch?v=HSZ_uaif57o" }
-                ]
-              },
+              }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Tools",
+        "icon": "",
+        "color": "#9c25eb",
+        "colorLight": "#EFF6FF",
+        "colorBorder": "#BFDBFE",
+        "children": [
           {
             "name": "IDEs",
             "children": [
@@ -447,265 +438,8 @@ const DATA = [
               }
             ]
           },
-          {
-            "name": "Cloud Platforms",
-            "children": [
-              {
-                "name": "Azure AI Foundry",
-                "description": "Microsoft's unified platform for building AI applications on Azure. Provides access to OpenAI models, open-source models, evaluation tools, prompt flow, and enterprise-grade deployment.",
-                "tags": ["Cloud", "Microsoft", "Enterprise"],
-                "sources": [
-                  { "label": "Azure AI Foundry", "url": "https://azure.microsoft.com/en-us/products/ai-services" },
-                  { "label": "Azure AI Docs", "url": "https://learn.microsoft.com/en-us/azure/ai-studio/" }
-                ]
-              },
-              {
-                "name": "AWS Bedrock",
-                "description": "Amazon's fully managed service for building with foundation models. Access Anthropic Claude, Meta Llama, Mistral, and other models through a unified API with fine-tuning, guardrails, and knowledge bases.",
-                "tags": ["Cloud", "AWS", "Multi-model"],
-                "sources": [
-                  { "label": "AWS Bedrock", "url": "https://aws.amazon.com/bedrock/" },
-                  { "label": "Bedrock Documentation", "url": "https://docs.aws.amazon.com/bedrock/" }
-                ]
-              },
-              {
-                "name": "Google Cloud Vertex AI",
-                "description": "Google's enterprise ML platform offering Gemini models, model garden with 150+ models, fine-tuning, RAG engine, and end-to-end MLOps for building production AI systems.",
-                "tags": ["Cloud", "Google", "MLOps"],
-                "sources": [
-                  { "label": "Vertex AI", "url": "https://cloud.google.com/vertex-ai" }
-                ]
-              },
-              {
-                "name": "Hugging Face",
-                "description": "The open-source AI community hub hosting 500K+ models, 200K+ datasets, and tools for training, fine-tuning, and deploying models. Features Transformers library, Spaces for demos, and Inference Endpoints.",
-                "tags": ["Community", "Open Source", "Hub"],
-                "sources": [
-                  { "label": "Hugging Face", "url": "https://huggingface.co/" },
-                  { "label": "Transformers Docs", "url": "https://huggingface.co/docs/transformers" }
-                ]
-              }
-            ]
-          }
         ]
       },
-      {
-        "name": "Concepts",
-        "icon": "◈",
-        "color": "#059669",
-        "colorLight": "#ECFDF5",
-        "colorBorder": "#A7F3D0",
-        "children": [
-          {
-            "name": "AI Fundamentals",
-            "children": [
-              {
-                "name": "LLMs",
-                "description": "Large Language Models are neural networks trained on massive text datasets to understand and generate human language. They form the foundation of modern AI assistants, using transformer architectures with billions of parameters.",
-                "tags": ["Core Concept", "Foundation"],
-                "sources": [
-                  { "label": "Wikipedia — LLMs", "url": "https://en.wikipedia.org/wiki/Large_language_model" },
-                  { "label": "Attention Is All You Need (Paper)", "url": "https://arxiv.org/abs/1706.03762" }
-                ]
-              },
-              {
-                "name": "Prompt Engineering",
-                "description": "The practice of crafting effective instructions to get the best outputs from language models. Techniques include few-shot examples, chain-of-thought prompting, system prompts, and structured output formatting.",
-                "tags": ["Skill", "Practical", "Essential"],
-                "sources": [
-                  { "label": "Anthropic Prompt Engineering Guide", "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" },
-                  { "label": "OpenAI Prompt Engineering Guide", "url": "https://platform.openai.com/docs/guides/prompt-engineering" },
-                  { "label": "Claude Prompt Library", "url": "https://platform.claude.com/docs/en/resources/prompt-library/library" }
-                ]
-              },
-              {
-                "name": "Optimizing Models",
-                "description": "Techniques for improving LLM accuracy and performance including prompt optimization, fine-tuning, retrieval-augmented generation, evaluation frameworks, and cost/latency trade-offs.",
-                "tags": ["Optimization", "Performance"],
-                "sources": [
-                  { "label": "OpenAI — Optimizing LLM Accuracy", "url": "https://platform.openai.com/docs/guides/optimizing-llm-accuracy" }
-                ]
-              },
-              {
-                "name": "Agents",
-                "description": "AI systems that can autonomously plan, reason, and take actions to accomplish goals. Agents use LLMs as their reasoning engine and interact with the world through tools like APIs, web browsers, and code execution.",
-                "tags": ["Core Concept", "Agentic AI"],
-                "sources": [
-                  { "label": "Anthropic — Building Agents", "url": "https://docs.anthropic.com/en/docs/build-with-claude/tool-use" },
-                  { "label": "Anthropic — Agents Research", "url": "https://www.anthropic.com/research/building-effective-agents" }
-                ]
-              },
-              {
-                "name": "AI vs Machine Learning",
-                "description": "Understanding the relationship between AI, machine learning, and deep learning. AI is the broadest concept, ML is a subset focused on learning from data, and DL uses neural networks for complex pattern recognition.",
-                "tags": ["Core Concept", "Terminology"],
-                "sources": [
-                  { "label": "Google Cloud — AI vs ML", "url": "https://cloud.google.com/learn/artificial-intelligence-vs-machine-learning" }
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Advanced Concepts",
-            "children": [
-              {
-                "name": "Embeddings",
-                "description": "Numerical vector representations of text, images, or other data that capture semantic meaning. Similar concepts end up close together in vector space, enabling similarity search, clustering, and recommendation systems.",
-                "tags": ["Vectors", "Semantic", "Core"],
-                "sources": [
-                  { "label": "OpenAI — Embeddings Guide", "url": "https://platform.openai.com/docs/guides/embeddings" }
-                ]
-              },
-              {
-                "name": "Vector Databases",
-                "description": "Specialized databases optimized for storing and querying high-dimensional vectors. Enable fast similarity search at scale, forming the backbone of RAG systems, semantic search, and recommendation engines.",
-                "tags": ["Database", "Infrastructure"],
-                "sources": [
-                  { "label": "Pinecone — What is a Vector DB", "url": "https://www.pinecone.io/learn/vector-database/" },
-                  { "label": "Pinecone", "url": "https://www.pinecone.io/" }
-                ]
-              },
-              {
-                "name": "RAG",
-                "description": "Retrieval-Augmented Generation combines LLMs with external knowledge retrieval. Instead of relying solely on training data, RAG fetches relevant documents at query time and includes them in the prompt for more accurate, up-to-date responses.",
-                "tags": ["Architecture", "Retrieval", "Key Pattern"],
-                "sources": [
-                  { "label": "Anthropic — RAG Guide", "url": "https://docs.anthropic.com/en/docs/build-with-claude/retrieval-augmented-generation" }
-                ]
-              },
-              {
-                "name": "MCP",
-                "description": "The Model Context Protocol is an open standard for connecting AI models to external data sources and tools. Think of it as a universal adapter — one protocol that lets any AI model talk to any data source or service.",
-                "tags": ["Protocol", "Standard", "Integration"],
-                "sources": [
-                  { "label": "MCP Official Site", "url": "https://modelcontextprotocol.io/" },
-                  { "label": "MCP Specification", "url": "https://spec.modelcontextprotocol.io/" }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "AI Architecture",
-        "icon": "◲",
-        "color": "#9333EA",
-        "colorLight": "#FAF5FF",
-        "colorBorder": "#DDD6FE",
-        "children": [
-          {
-            "name": "Production Systems",
-            "children": [
-              {
-                "name": "Structured Outputs (JSON Mode)",
-                "description": "Techniques for getting LLMs to return data in specific formats like JSON, XML, or typed schemas. Essential for building reliable AI pipelines where downstream systems need to parse model outputs programmatically.",
-                "tags": ["Production", "Reliability", "API"],
-                "sources": [
-                  { "label": "OpenAI — Structured Outputs", "url": "https://platform.openai.com/docs/guides/structured-outputs" }
-                ]
-              },
-              {
-                "name": "Multi Agent Systems",
-                "description": "Architectures where multiple specialized AI agents collaborate to solve complex problems. Each agent handles a specific domain or task, communicating through defined protocols to achieve goals no single agent could.",
-                "tags": ["Architecture", "Multi-Agent", "Advanced"],
-                "sources": [
-                  { "label": "AutoGen — Multi-Agent", "url": "https://microsoft.github.io/autogen/" },
-                  { "label": "CrewAI", "url": "https://www.crewai.com/" }
-                ]
-              },
-              {
-                "name": "Agent Orchestration",
-                "description": "The practice of coordinating and managing AI agents in production. Includes routing between agents, maintaining state, handling errors, implementing guardrails, and ensuring reliable execution of complex workflows.",
-                "tags": ["Orchestration", "Production", "Workflow"],
-                "sources": [
-                  { "label": "LangChain — Agents", "url": "https://python.langchain.com/docs/concepts/agents/" },
-                  { "label": "LangGraph", "url": "https://langchain-ai.github.io/langgraph/" }
-                ]
-              },
-              {
-                "name": "Fine-tuning LLMs",
-                "description": "The process of further training a pre-trained model on domain-specific data to improve performance for particular tasks. Balances customization benefits against cost, complexity, and the risk of losing general capabilities.",
-                "tags": ["Training", "Customization", "Advanced"],
-                "sources": [
-                  { "label": "OpenAI — Fine-tuning Guide", "url": "https://platform.openai.com/docs/guides/fine-tuning" }
-                ]
-              },
-              {
-                "name": "Building Vector Search Systems",
-                "description": "Designing and implementing systems that use vector embeddings for semantic search. Covers embedding model selection, chunking strategies, indexing approaches, hybrid search, and scaling considerations.",
-                "tags": ["Search", "Infrastructure", "Embeddings"],
-                "sources": [
-                  { "label": "Pinecone — Vector Database", "url": "https://www.pinecone.io/learn/vector-database/" }
-                ]
-              },
-              {
-                "name": "Implementing RAG",
-                "description": "Building production RAG pipelines from end to end. Covers document ingestion, chunking, embedding, retrieval strategies, re-ranking, prompt construction, evaluation, and common failure modes.",
-                "tags": ["RAG", "Pipeline", "Production"],
-                "sources": [
-                  { "label": "Anthropic — RAG Guide", "url": "https://docs.anthropic.com/en/docs/build-with-claude/retrieval-augmented-generation" }
-                ]
-              },
-              {
-                "name": "Connecting MCP servers",
-                "description": "Integrating existing MCP servers into your AI applications. Learn how to discover, configure, and connect to MCP-compliant data sources and tools to extend your AI system's capabilities.",
-                "tags": ["MCP", "Integration", "Setup"],
-                "sources": [
-                  { "label": "MCP Quickstart — Client", "url": "https://modelcontextprotocol.io/quickstart/client" },
-                  { "label": "MCP Quickstart — Server", "url": "https://modelcontextprotocol.io/quickstart/server" }
-                ]
-              },
-              {
-                "name": "Building MCPs",
-                "description": "Creating custom MCP servers to expose your own data and tools to AI models. Learn the protocol specification, implement resource providers, define tool schemas, and handle the MCP lifecycle.",
-                "tags": ["MCP", "Development", "Protocol"],
-                "sources": [
-                  { "label": "MCP Server Quickstart", "url": "https://modelcontextprotocol.io/quickstart/server" },
-                  { "label": "MCP Specification", "url": "https://spec.modelcontextprotocol.io/" }
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Agent Design Patterns",
-            "children": [
-              {
-                "name": "ReAct (Reason + Act)",
-                "description": "A pattern where the agent alternates between reasoning (thinking about what to do) and acting (executing tools or actions). The model generates a thought, takes an action, observes the result, and repeats until the task is complete.",
-                "tags": ["Pattern", "Reasoning", "Foundational"],
-                "sources": [
-                  { "label": "Prompting Guide — ReAct", "url": "https://www.promptingguide.ai/techniques/react" },
-                  { "label": "ReAct Paper", "url": "https://arxiv.org/abs/2210.03629" }
-                ]
-              },
-              {
-                "name": "Plan-and-Execute",
-                "description": "A two-phase pattern where one LLM call creates a high-level plan of steps, and subsequent calls execute each step. Separating planning from execution improves reliability on complex, multi-step tasks.",
-                "tags": ["Pattern", "Planning", "Multi-step"],
-                "sources": [
-                  { "label": "LangChain — Planning Agents", "url": "https://blog.langchain.dev/planning-agents/" }
-                ]
-              },
-              {
-                "name": "Reflection & Self-Critique",
-                "description": "Agents evaluate and critique their own outputs before finalizing them. An inner loop reviews the response for errors, completeness, and quality, then revises as needed. Dramatically improves output quality.",
-                "tags": ["Pattern", "Quality", "Self-improvement"],
-                "sources": [
-                  { "label": "Reflexion Paper", "url": "https://arxiv.org/abs/2303.11366" }
-                ]
-              },
-              {
-                "name": "Human-in-the-Loop",
-                "description": "Designing agent systems that can request human approval, feedback, or input at critical decision points. Balances autonomy with oversight, especially important for high-stakes actions or when agent confidence is low.",
-                "tags": ["Pattern", "Safety", "Oversight"],
-                "sources": [
-                  { "label": "LangChain — Human-in-the-Loop", "url": "https://python.langchain.com/docs/concepts/human_in_the_loop/" }
-                ]
-              }
-            ]
-          }
-        ]
-      }
     ]
   }
 ];
