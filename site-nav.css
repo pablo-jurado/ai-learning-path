@@ -88,9 +88,7 @@
 }
 
 .site-nav.collapsed .site-nav-label {
-  padding: 8px;
-  text-align: center;
-  font-size: 9px;
+  display: none;
 }
 
 .site-nav-list {
@@ -149,9 +147,6 @@
   padding: 12px;
 }
 
-.site-nav.collapsed .site-nav-label:not(:empty) {
-  display: block;
-}
 
 /* Body offset when nav is present */
 body.has-site-nav {
