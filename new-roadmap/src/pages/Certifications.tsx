@@ -1,5 +1,9 @@
+import { Header } from "../components/Header";
+
 export function Certifications() {
     return (
-        <div>TODO: Certifications</div>
+            <div className="container">
+              <Header name="Certifications" description="Explore industry-recognized Cloud certifications for AI professionals" />
+            </div>
     )
 }

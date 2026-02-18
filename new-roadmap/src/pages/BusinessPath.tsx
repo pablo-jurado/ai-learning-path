@@ -1,5 +1,9 @@
+import { Header } from "../components/Header";
+
 export function BusinessPath() {
-    return (
-        <div>TODO: Business Path</div>
-    )
+  return (
+    <div className="container">
+      <Header name="Business Path" description="Explore concepts and strategies for AI development" />
+    </div>
+  );
 }

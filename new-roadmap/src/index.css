@@ -540,6 +540,159 @@ body.sidebar-open .container {
   color: var(--text-primary);
 }
 
+/* ============================================================
+   APP LAYOUT
+   ============================================================ */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ============================================================
+   SIDE NAVIGATION
+   ============================================================ */
+.sidenav-toggle {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 201;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.15s ease;
+}
+
+.sidenav-toggle:hover {
+  background: var(--surface-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 18px;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 1px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 260px;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-lg);
+}
+
+.sidenav.open {
+  transform: translateX(0);
+}
+
+.sidenav-header {
+  padding: 25px 10px 25px 70px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sidenav-brand {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.sidenav-links {
+  list-style: none;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sidenav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.15s ease;
+}
+
+.sidenav-link:hover {
+  background: var(--surface-hover);
+  color: var(--text-primary);
+}
+
+.sidenav-link.active {
+  background: var(--surface-hover);
+  color: var(--text-primary);
+  font-weight: 600;
+  box-shadow: inset 3px 0 0 var(--text-primary);
+}
+
+.sidenav-link-icon {
+  font-size: 16px;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.sidenav-link-label {
+  white-space: nowrap;
+}
+
+.sidenav-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 199;
+  animation: fadeIn 0.3s ease;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
   .container {

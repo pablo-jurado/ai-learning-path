@@ -40,7 +40,7 @@ export default function DeveloperPath() {
     <>
       <Sidebar node={sidebarNode} breadcrumb={sidebarBreadcrumb} onClose={handleCloseSidebar} />
       <div className="container">
-        <Header name={root.name} />
+        <Header name={root.name} description='Explore tools, concepts, and architecture patterns for modern AI development'/>
         <div className="tabs">
           {tabs.map((tab, i) => <Tab tab={tab} index={i} activeTab={activeTab} setActiveTab={setActiveTab} />)}
         </div>

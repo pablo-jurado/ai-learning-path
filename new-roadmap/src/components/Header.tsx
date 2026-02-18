@@ -1,13 +1,13 @@
 interface HeaderProps {
     name: string
+    description: string
 }
 
-export function Header({ name }: HeaderProps) {
+export function Header({ name, description }: HeaderProps) {
     return (
         <header className="header">
-            <div className="header-label">Interactive Roadmap</div>
             <h1>{name}</h1>
-            <p>Explore tools, concepts, and architecture patterns for modern AI development</p>
+            <p>{description}</p>
         </header>
     )
 }
