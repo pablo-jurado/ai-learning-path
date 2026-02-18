@@ -1,42 +1,55 @@
-import { useState } from 'react'
-import { getColors, isLeaf } from '../utils'
-import { Accordion } from './Accordion'
-import type { DataNode } from '../types'
+import { useState } from "react";
+import { getColors, isLeaf } from "../utils";
+import { Accordion } from "./Accordion";
+import type { DataNode } from "../types";
 
 interface TabPanelProps {
-  tab: DataNode
-  index: number
-  isActive: boolean
-  activeLeaf: string | null
-  onLeafClick: (node: DataNode, breadcrumb: string) => void
+  tab: DataNode;
+  index: number;
+  isActive: boolean;
+  activeLeaf: string | null;
+  onLeafClick: (node: DataNode, breadcrumb: string) => void;
 }
 
-export function TabPanel({ tab, index, isActive, activeLeaf, onLeafClick }: TabPanelProps) {
-  const [expandAll, setExpandAll] = useState(false)
+export function TabPanel({
+  tab,
+  index,
+  isActive,
+  activeLeaf,
+  onLeafClick,
+}: TabPanelProps) {
+  const [expandAll, setExpandAll] = useState(false);
 
   const colors = getColors(tab.color, index);
 
   return (
-    <div className={`tab-content${isActive ? ' active' : ''}`}>
+    <div className={`tab-content${isActive ? " active" : ""}`}>
       {tab.description && <div className="module-goal">{tab.description}</div>}
       <div className="toolbar">
-        <button className="toolbar-btn" onClick={() => setExpandAll(!expandAll)}>{expandAll ? 'Collapse all' : 'Expand all'}</button>
+        <button
+          className="toolbar-btn"
+          onClick={() => setExpandAll(!expandAll)}
+        >
+          {expandAll ? "Collapse all" : "Expand all"}
+        </button>
       </div>
       <div className="accordion-group">
-        {tab.children?.filter(s => !isLeaf(s)).map(section => (
-          <Accordion
-            key={section.name}
-            node={section}
-            depth={0}
-            accentColor={colors.color}
-            isTopLevel={true}
-            breadcrumb={tab.name}
-            expandAll={expandAll}
-            activeLeaf={activeLeaf}
-            onLeafClick={onLeafClick}
-          />
-        ))}
+        {tab.children
+          ?.filter((s) => !isLeaf(s))
+          .map((section) => (
+            <Accordion
+              key={section.name}
+              node={section}
+              depth={0}
+              accentColor={colors.color}
+              isTopLevel={true}
+              breadcrumb={tab.name}
+              expandAll={expandAll}
+              activeLeaf={activeLeaf}
+              onLeafClick={onLeafClick}
+            />
+          ))}
       </div>
     </div>
-  )
+  );
 }

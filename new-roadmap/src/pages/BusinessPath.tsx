@@ -1,9 +1,6 @@
-import { Header } from "../components/Header";
+import PathWrapper from "../components/PathWrapper";
+import { BUSINESS_PATH } from "../data/data";
 
 export function BusinessPath() {
-  return (
-    <div className="container">
-      <Header name="Business Path" description="Explore concepts and strategies for AI development" />
-    </div>
-  );
+  return <PathWrapper root={BUSINESS_PATH[0]} />;
 }

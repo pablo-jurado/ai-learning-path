@@ -1,6 +1,6 @@
 import type { DataNode } from "../types";
 
-export const DATA: DataNode[] = [
+export const DEV_PATH: DataNode[] = [
   {
     name: "AI Developer Path",
     children: [
@@ -712,15 +712,68 @@ export const DATA: DataNode[] = [
           },
         ],
       },
+    ],
+  },
+];
+
+export const BUSINESS_PATH: DataNode[] = [
+  {
+    name: "Business AI Path",
+    description:
+      "Learn how to leverage AI in a business context, including identifying use cases, building a business case, and implementing AI solutions.",
+    children: [
       {
-        name: "AI Certifications",
-        icon: "4",
-        color: "#a31687",
-        description:
-          "This module covers the key certifications offered by AWS and Microsoft Azure for AI practitioners and engineers, along with recommended learning paths and resources to prepare for these exams.",
+        name: "AI Foundation Concepts",
+        description: "Understand the core concepts of AI.",
         children: [
           {
-            name: "AWS AI Certifications",
+            name: "TODO",
+            description: "TODO",
+            children: [
+              {
+                name: "TODO",
+                description: "TODO",
+                sources: [],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: "AI Use Cases in Business",
+        description:
+          "Explore various use cases of AI in different industries and business functions.",
+        children: [
+          {
+            name: "TODO",
+            description: "TODO",
+            children: [
+              {
+                name: "TODO",
+                description: "TODO",
+                sources: [],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+];
+
+export const CERTIFICATIONS_PATH: DataNode[] = [
+  {
+    name: "AI Certifications",
+    description:
+      "This module covers the key certifications offered by AWS and Microsoft Azure for AI practitioners and engineers, along with recommended learning paths and resources to prepare for these exams.",
+    children: [
+      {
+        name: "AWS AI Certifications",
+        icon: "AWS",
+        color: "#ff9900",
+        children: [
+          {
+            name: "AWS Learning Tracks",
             children: [
               {
                 name: "AWS Track - Beginner",
@@ -807,8 +860,15 @@ export const DATA: DataNode[] = [
               },
             ],
           },
+        ],
+      },
+      {
+        name: "Microsoft Azure AI Certifications",
+        icon: "Azure",
+        color: "#0078d4",
+        children: [
           {
-            name: "Microsoft Azure AI Certifications",
+            name: "Azure Learning Tracks",
             children: [
               {
                 name: "Azure Track - Beginner",
@@ -868,7 +928,7 @@ export const DATA: DataNode[] = [
                     url: "https://learn.microsoft.com/en-us/training/modules/ai-information-extraction/",
                   },
                   {
-                    label: "🏆 Certification: Azure AI Fundamentals (AI-900)",
+                    label: "Certification: Azure AI Fundamentals (AI-900)",
                     url: "https://learn.microsoft.com/en-us/certifications/azure-ai-fundamentals/",
                   },
                 ],
@@ -883,7 +943,7 @@ export const DATA: DataNode[] = [
                   "Azure AI Services (e.g., vision, language, information extraction services)",
                   "C#",
                   "Python",
-                  "REST‑based APIs",
+                  "REST-based APIs",
                   "Azure SDKs",
                 ],
                 sources: [
@@ -928,7 +988,7 @@ export const DATA: DataNode[] = [
                     url: "https://learn.microsoft.com/en-us/credentials/applied-skills/build-natural-language-solution-azure-ai/",
                   },
                   {
-                    label: "🏆 Certification: Azure AI Engineer Associate",
+                    label: "Certification: Azure AI Engineer Associate",
                     url: "https://learn.microsoft.com/en-us/certifications/azure-ai-engineer/",
                   },
                 ],
