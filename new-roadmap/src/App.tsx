@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import DeveloperPath from "./pages/DeveloperPath";
 import { BusinessPath } from "./pages/BusinessPath";
 import { Certifications } from "./pages/Certifications";
+import AgentProjectGuidelines from "./pages/AgentProjectGuidelines";
 
 export default function App() {
   return (
@@ -15,6 +16,10 @@ export default function App() {
           <Route path="/developer" element={<DeveloperPath />} />
           <Route path="/business" element={<BusinessPath />} />
           <Route path="/certifications" element={<Certifications />} />
+          <Route
+            path="/dev-path/phase-2/project-guidelines"
+            element={<AgentProjectGuidelines />}
+          />
 
           {/* wild card to go to home */}
           <Route path="*" element={<Home />} />
