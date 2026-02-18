@@ -2,7 +2,7 @@ import type { DataNode } from "../types";
 
 export const DATA: DataNode[] = [
   {
-    name: "AI Learning Path",
+    name: "AI Developer Path",
     children: [
       {
         name: "AI Foundation",
