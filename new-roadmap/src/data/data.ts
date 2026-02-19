@@ -117,18 +117,6 @@ export const DEV_PATH: DataNode[] = [
             name: "Agent Design Patterns",
             children: [
               {
-                name: "Orchestrating Agents",
-                description:
-                  "Techniques for coordinating multiple AI agents to work together on complex tasks. This includes communication protocols, task decomposition, and shared memory systems to enable collaborative problem-solving.",
-                tags: ["Agentic AI", "Collaboration", "Advanced"],
-                sources: [
-                  {
-                    label: "Orchestrating Multiple AI Agents",
-                    url: "https://www.anthropic.com/engineering/building-effective-agents",
-                  },
-                ],
-              },
-              {
                 name: "ReAct (Reason + Act)",
                 description:
                   "A pattern where the agent alternates between reasoning (thinking about what to do) and acting (executing tools or actions). The model generates a thought, takes an action, observes the result, and repeats until the task is complete.",
@@ -238,6 +226,33 @@ export const DEV_PATH: DataNode[] = [
                   {
                     label: "MCP (Model Context Protocol) Explained",
                     url: "https://www.youtube.com/watch?v=7j1t3UZA1TY&t",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            name: "Agent Orchestration",
+            children: [
+              {
+                name: "Orchestrating Agents",
+                description:
+                  "Techniques for coordinating multiple AI agents to work together on complex tasks. ",
+                tags: ["Agentic AI", "Collaboration", "Advanced"],
+                sources: [
+                  {
+                    label:
+                      "The Orchestration of Multi-Agent Systems: Architectures, Protocols, and Enterprise Adoption",
+                    url: "https://arxiv.org/html/2601.13671v1",
+                  },
+                  {
+                    label: "Agent Orchestration Design Patterns",
+                    url: "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns",
+                  },
+                  {
+                    label:
+                      "Enterprise AI Scale with Multi-Agent Supervisor Architecture",
+                    url: "https://www.databricks.com/blog/multi-agent-supervisor-architecture-orchestrating-enterprise-ai-scale",
                   },
                 ],
               },
