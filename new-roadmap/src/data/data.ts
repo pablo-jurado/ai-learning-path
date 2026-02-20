@@ -479,7 +479,7 @@ export const DEV_PATH: DataNode[] = [
                       {
                         label: "Project Guidelines",
                         url: "",
-                        route: "/project-guidelines",
+                        route: "/generic-project-guidelines",
                       },
                     ],
                   },
@@ -669,7 +669,7 @@ export const DEV_PATH: DataNode[] = [
                       {
                         label: "Project Guidelines",
                         url: "",
-                        route: "/project-guidelines",
+                        route: "/generic-project-guidelines",
                       },
                     ],
                   },

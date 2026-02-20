@@ -641,6 +641,14 @@ body.sidebar-open .container {
   color: var(--text-primary);
 }
 
+.sidenav-sublinks {
+  list-style: none;
+}
+
+.sidenav-sublinks a {
+  padding-left: 30px;
+}
+
 .sidenav-links {
   list-style: none;
   padding: 12px 10px;
